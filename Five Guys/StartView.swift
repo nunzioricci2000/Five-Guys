@@ -17,6 +17,8 @@ struct StartView: View {
     
     var body: some View {
         ZStack {
+            Color.blue
+                .ignoresSafeArea()
             TabView(selection: $current) {
                 ZStack {
                     Image("maze")
