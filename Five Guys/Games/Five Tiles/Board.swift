@@ -55,10 +55,41 @@ struct BoardView: View {
             ForEach((0..<board.height), id: \.self) { y in
                 HStack {
                     ForEach(0..<board.width, id: \.self) { x in
-                        TileView(tile: $board._board[y][x], board: Binding<Board?>($board))
+                        TileView(tile: $board._board[y][x], board: Binding<Board?>($board), corners: roundedCorners(x, y))
                     }
                 }
             }
         }
     }
+    
+    func roundedCorners(_ x: Int, _ y: Int) -> UIRectCorner {
+        var result = [UIRectCorner]()
+        if x == 0, y == 0 {
+            result.append(.topLeft)
+        }
+        if x == board.width-1, y == 0 {
+            result.append(.topRight)
+        }
+        if x == board.width-1, y == board.height-1 {
+            result.append(.bottomRight)
+        }
+        if x == 0, y == board.height-1 {
+            result.append(.bottomLeft)
+        }
+        return UIRectCorner(result)
+    }
 }
+
+struct BoardView_Previews: PreviewProvider{
+    @State static var board: Board = Board()
+    
+    static var previews: some View {
+        VStack {
+            Text("Tiles").font(.title)
+            Spacer()
+            BoardView(board: board)
+            Spacer()
+        }.padding()
+    }
+}
+

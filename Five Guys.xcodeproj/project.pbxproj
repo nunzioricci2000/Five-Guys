@@ -11,6 +11,7 @@
 		CD5B304829043C9300B9105C /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304729043C9300B9105C /* Board.swift */; };
 		CD5B304A29043CBC00B9105C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304929043CBC00B9105C /* Game.swift */; };
 		CD5B304C2904417600B9105C /* Five Tiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304B2904417600B9105C /* Five Tiles.swift */; };
+		CD5B304F29045A4B00B9105C /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304E29045A4B00B9105C /* RoundedCornersShape.swift */; };
 		CD77072728FF46C400659FFC /* Five_GuysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD77072628FF46C400659FFC /* Five_GuysApp.swift */; };
 		CD77072928FF46C400659FFC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD77072828FF46C400659FFC /* StartView.swift */; };
 		CD77072B28FF46C600659FFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD77072A28FF46C600659FFC /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		CD5B304729043C9300B9105C /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		CD5B304929043CBC00B9105C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CD5B304B2904417600B9105C /* Five Tiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Five Tiles.swift"; sourceTree = "<group>"; };
+		CD5B304E29045A4B00B9105C /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		CD77072328FF46C400659FFC /* Five Guys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Five Guys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD77072628FF46C400659FFC /* Five_GuysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Five_GuysApp.swift; sourceTree = "<group>"; };
 		CD77072828FF46C400659FFC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 			path = "Five Tiles";
 			sourceTree = "<group>";
 		};
+		CD5B304D29045A1000B9105C /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				CD5B304E29045A4B00B9105C /* RoundedCornersShape.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		CD77071A28FF46C400659FFC = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		CD77072528FF46C400659FFC /* Five Guys */ = {
 			isa = PBXGroup;
 			children = (
+				CD5B304D29045A1000B9105C /* Custom */,
 				CD5B304329043BCD00B9105C /* Games */,
 				CD77072628FF46C400659FFC /* Five_GuysApp.swift */,
 				CD7707342900934C00659FFC /* MainView.swift */,
@@ -180,6 +191,7 @@
 				CD77073B2901827F00659FFC /* LevelHandlerView.swift in Sources */,
 				CD5B304A29043CBC00B9105C /* Game.swift in Sources */,
 				CD77072928FF46C400659FFC /* StartView.swift in Sources */,
+				CD5B304F29045A4B00B9105C /* RoundedCornersShape.swift in Sources */,
 				CD7707372900953D00659FFC /* HomeView.swift in Sources */,
 				CD5B304629043C6E00B9105C /* Tile.swift in Sources */,
 				CD7707352900934C00659FFC /* MainView.swift in Sources */,

@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-enum Corner {
-    case nw, ne, se, sw
-}
-
 struct Tile {
     var value: Bool
     let position: (Int, Int)?
@@ -32,9 +28,9 @@ struct Tile {
 struct TileView: View {
     @Binding var tile: Tile
     @Binding var board: Board?
-    var corner: Corner? = nil
+    var corners: UIRectCorner = []
     var body: some View {
-        RoundedRectangle(cornerRadius: 10)
+        RoundedCornersShape(corners: corners, radius: 100)
             .fill((tile.value ? Color.yellow : .gray).gradient)
             .onTapGesture {
                 if tile.position != nil {
@@ -43,6 +39,7 @@ struct TileView: View {
                     tile.invert()
                 }
             }.aspectRatio(contentMode: .fit)
+            .cornerRadius(10)
     }
 }
 
@@ -57,17 +54,17 @@ struct TileView_Previews: PreviewProvider{
             Spacer()
             HStack {
                 TileView(tile: $active, board: $board)
-                TileView(tile: $active, board: $board, corner: .nw)
-                TileView(tile: $active, board: $board, corner: .ne)
-                TileView(tile: $active, board: $board, corner: .se)
-                TileView(tile: $active, board: $board, corner: .sw)
+                TileView(tile: $active, board: $board, corners: [.topLeft])
+                TileView(tile: $active, board: $board, corners: [.topRight])
+                TileView(tile: $active, board: $board, corners: [.bottomRight])
+                TileView(tile: $active, board: $board, corners: [.bottomLeft])
             }
             HStack {
                 TileView(tile: $inactive, board: $board)
-                TileView(tile: $inactive, board: $board, corner: .nw)
-                TileView(tile: $inactive, board: $board, corner: .ne)
-                TileView(tile: $inactive, board: $board, corner: .se)
-                TileView(tile: $inactive, board: $board, corner: .sw)
+                TileView(tile: $inactive, board: $board, corners: [.topLeft])
+                TileView(tile: $inactive, board: $board, corners: [.topRight])
+                TileView(tile: $inactive, board: $board, corners: [.bottomRight])
+                TileView(tile: $inactive, board: $board, corners: [.bottomLeft])
             }
             Spacer()
         }.padding()
