@@ -34,6 +34,7 @@ struct FiveTiles {
             state = .end
         }
     }
+    
 }
 
 struct FiveTilesView: View {

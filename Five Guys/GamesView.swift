@@ -16,16 +16,18 @@ struct GamesView: View {
             Text("GAMES").font(.title)
             Spacer()
             Button {
-                currentPage = .level(1)
+                currentPage = .level(.fivetiles(5))
             } label: {
-                Text("Level 1")
-            }
+                Text("Five Tiles")
+                    .padding()
+            }.buttonStyle(.bordered)
             Spacer()
             Button {
-                currentPage = .level(2)
+                currentPage = .level(.tris(5))
             } label: {
-                Text("Level 2")
-            }
+                Text("Tris")
+                    .padding()
+            }.buttonStyle(.bordered)
             Spacer()
         }
     }

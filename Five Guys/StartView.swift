@@ -13,7 +13,7 @@ struct StartView: View {
     }
     
     @State var current = Slide.games
-    @Binding var currentPage: Page
+    @Binding var page: Page
     
     var body: some View {
         ZStack {
@@ -51,7 +51,7 @@ struct StartView: View {
                     }
                         .frame(width: 300)
                 }.onTapGesture {
-                    currentPage = .home
+                    page = .home
                 }.tag(Slide.trophy)
             }
             .tabViewStyle(.page)
@@ -63,6 +63,6 @@ struct StartView: View {
 struct StartView_Previews: PreviewProvider {
     @State static var currentPage: Page = .start
     static var previews: some View {
-        StartView(currentPage: $currentPage)
+        StartView(page: $currentPage)
     }
 }

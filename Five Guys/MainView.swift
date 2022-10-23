@@ -9,7 +9,7 @@ import SwiftUI
 
 enum Page {
     case start, home, games
-    case level(Int)
+    case level(Level)
 }
 
 struct MainView: View {
@@ -21,7 +21,7 @@ struct MainView: View {
             Color.gray.ignoresSafeArea()
             Group {
                 switch currentPage {
-                case .start: StartView(currentPage: $currentPage)
+                case .start: StartView(page: $currentPage)
                 case .home: HomeView(currentPage: $currentPage)
                 case .games: GamesView(currentPage: $currentPage)
                 case .level(let id):

@@ -20,13 +20,13 @@ struct HomeView: View {
                 currentPage = .games
             } label: {
                 Text("Games")
-            }
+            }.buttonStyle(.bordered)
             Spacer()
             Button() {
                 
             } label: {
                 Text("Points")
-            }
+            }.buttonStyle(.bordered)
             Spacer()
         }
     }

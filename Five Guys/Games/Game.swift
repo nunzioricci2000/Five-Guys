@@ -11,10 +11,8 @@ enum GameState {
     case running, ended
 }
 
-protocol Minigame {
-    var state: GameState { set get }
-    func name() -> String
-    func points() -> Int
-    func levels() -> [String]
+protocol Game {
+    var name: String { get }
+    var points: Int { get }
+    var state: GameState { get }
 }
-

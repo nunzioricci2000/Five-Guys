@@ -7,16 +7,25 @@
 
 import SwiftUI
 
+enum Level {
+    case tris(Int)
+    case fivetiles(Int)
+}
+
 struct LevelHandlerView: View {
-    let id : Int
+    let id: Level
     
     var body: some View {
-        Text("Level: \(id)")
+        switch id {
+        case .fivetiles(let difficulty):
+            FiveTilesView(game: FiveTiles(difficulty))
+        default: Text("Unknown")
+        }
     }
 }
 
 struct LevelHandlerView_Previews: PreviewProvider {
     static var previews: some View {
-        LevelHandlerView(id: 1)
+        LevelHandlerView(id: .fivetiles(10))
     }
 }
