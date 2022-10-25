@@ -96,6 +96,23 @@
 			path = Tris;
 			sourceTree = "<group>";
 		};
+		CD5B3095290837BB00B9105C /* Onboard */ = {
+			isa = PBXGroup;
+			children = (
+				CD5B3096290837D000B9105C /* Slides */,
+				CD5B308F290805FC00B9105C /* OnboardViewModel.swift */,
+				CD77072828FF46C400659FFC /* OnboardView.swift */,
+			);
+			path = Onboard;
+			sourceTree = "<group>";
+		};
+		CD5B3096290837D000B9105C /* Slides */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Slides;
+			sourceTree = "<group>";
+		};
 		CD77071A28FF46C400659FFC = {
 			isa = PBXGroup;
 			children = (
@@ -115,13 +132,12 @@
 		CD77072528FF46C400659FFC /* Five Guys */ = {
 			isa = PBXGroup;
 			children = (
+				CD5B3095290837BB00B9105C /* Onboard */,
 				CD5B304D29045A1000B9105C /* Custom */,
 				CD5B304329043BCD00B9105C /* Games */,
 				CD77072628FF46C400659FFC /* Five_GuysApp.swift */,
 				CD7707342900934C00659FFC /* MainView.swift */,
 				CD5B308D2908012800B9105C /* MainViewModel.swift */,
-				CD77072828FF46C400659FFC /* OnboardView.swift */,
-				CD5B308F290805FC00B9105C /* OnboardViewModel.swift */,
 				CD7707362900953D00659FFC /* HomeView.swift */,
 				CD77073829017AEB00659FFC /* GamesView.swift */,
 				CD77072A28FF46C600659FFC /* Assets.xcassets */,
