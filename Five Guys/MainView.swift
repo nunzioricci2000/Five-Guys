@@ -7,27 +7,24 @@
 
 import SwiftUI
 
-enum Page {
-    case start, home, games
-    case level(Level)
-}
+
 
 struct MainView: View {
-    
-    @State var currentPage: Page = .start
+    @StateObject var mainvm = ViewModel()
     
     var body: some View {
-        return ZStack {
-            Color.gray.ignoresSafeArea()
+        ZStack {
+            Color.blue
+                .ignoresSafeArea()
             Group {
-                switch currentPage {
-                case .start: StartView(page: $currentPage)
-                case .home: HomeView(currentPage: $currentPage)
-                case .games: GamesView(currentPage: $currentPage)
+                switch mainvm.page {
+                case .onboard: OnboardView()
+                case .home: HomeView()
+                case .games: GamesView()
                 case .level(let id):
                     LevelHandlerView(id: id)
                 }
-            }
+            }.environmentObject(mainvm)
         }
     }
 }

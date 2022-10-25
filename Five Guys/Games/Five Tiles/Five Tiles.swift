@@ -16,7 +16,7 @@ struct FiveTiles {
     var state: GameState = .play
     init(_ difficulty: Int = 5) {
         self.difficulty = difficulty
-        self.board = Board(5,5)
+        self.board = Board(7,7)
         new()
     }
     
@@ -38,7 +38,7 @@ struct FiveTiles {
 }
 
 struct FiveTilesView: View {
-    @State var game = FiveTiles(5)
+    @State var game = FiveTiles(25)
     
     var body: some View {
         VStack {

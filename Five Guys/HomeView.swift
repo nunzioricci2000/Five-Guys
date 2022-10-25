@@ -9,33 +9,33 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @Binding var currentPage: Page
+    @EnvironmentObject var mainvm: MainView.ViewModel
     
     var body: some View {
-        VStack {
-            Spacer()
-            Text("Welcome you on board, Lets roll now!")
-            Spacer()
-            Button() {
-                currentPage = .games
-            } label: {
-                Text("Games")
-            }.buttonStyle(.bordered)
-            Spacer()
-            Button() {
-                
-            } label: {
-                Text("Points")
-            }.buttonStyle(.bordered)
-            Spacer()
+        NavigationView {
+            ZStack {
+                    Color.gray.ignoresSafeArea()
+                VStack {
+                    Spacer()
+                    Text("Welcome you on board, Lets roll now!")
+                    Spacer()
+                    NavigationLink(destination: GamesView(), label: {
+                        Text("Games")
+                    }).buttonStyle(.borderedProminent)
+                    Spacer()
+                    NavigationLink(destination: GamesView(), label: {
+                        Text("Points")
+                    }).buttonStyle(.borderedProminent)
+                    Spacer()
+                }
+            }
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
-    @State static var currentPage: Page = .home
     
     static var previews: some View {
-        HomeView(currentPage: $currentPage)
+        HomeView()
     }
 }

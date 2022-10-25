@@ -8,34 +8,49 @@
 import SwiftUI
 
 struct GamesView: View {
-    @Binding var currentPage: Page
+    @EnvironmentObject var mainvm: MainView.ViewModel
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+
+    var btnBack : some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image("btnBack") // set image here
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.white)
+            }
+        }
+    }
     
     var body: some View {
-        VStack {
-            Spacer()
-            Text("GAMES").font(.title)
-            Spacer()
-            Button {
-                currentPage = .level(.fivetiles(5))
-            } label: {
-                Text("Five Tiles")
-                    .padding()
-            }.buttonStyle(.bordered)
-            Spacer()
-            Button {
-                currentPage = .level(.tris(5))
-            } label: {
-                Text("Tris")
-                    .padding()
-            }.buttonStyle(.bordered)
-            Spacer()
+        ZStack {
+                Color.gray.ignoresSafeArea()
+            VStack {
+                Spacer()
+                Text("GAMES").font(.title)
+                Spacer()
+                Button {
+                    mainvm.setPage(.level(.fivetiles(5)))
+                } label: {
+                    Text("Five Tiles")
+                        .padding()
+                }.buttonStyle(.borderedProminent)
+                Spacer()
+                Button {
+                    mainvm.setPage(.level(.fivetiles(5)))
+                } label: {
+                    Text("Tris")
+                        .padding()
+                }.buttonStyle(.borderedProminent)
+                Spacer()
+            }.navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading: btnBack)
         }
     }
 }
 
 struct GamesView_Previews: PreviewProvider {
-    @State static var currentPage: Page = .games
     static var previews: some View {
-        GamesView(currentPage: $currentPage)
+        GamesView()
     }
 }

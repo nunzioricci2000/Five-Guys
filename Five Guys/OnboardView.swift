@@ -7,19 +7,13 @@
 
 import SwiftUI
 
-struct StartView: View {
-    enum Slide {
-        case games, points, trophy
-    }
-    
-    @State var current = Slide.games
-    @Binding var page: Page
+struct OnboardView: View {
+    @EnvironmentObject var mainvm: MainView.ViewModel
+    @StateObject var viewModel = ViewModel()
     
     var body: some View {
         ZStack {
-            Color.blue
-                .ignoresSafeArea()
-            TabView(selection: $current) {
+            TabView(selection: $viewModel.slide) {
                 ZStack {
                     Image("maze")
                     VStack(alignment: .leading) {
@@ -27,9 +21,9 @@ struct StartView: View {
                             .font(.title)
                         Text("In each level you will face a different game. Every time you complete a level you will get 20 points")
                             .font(.body)
-                    }.frame(width: 300)
+                    }
                 }.onTapGesture {
-                    current = .points
+                    viewModel.setSlide( .points)
                 }.tag(Slide.games)
                 ZStack {
                     Image("stars")
@@ -38,9 +32,8 @@ struct StartView: View {
                         Text("You can use the points you collected")
                             .font(.body)
                     }
-                        .frame(width: 300)
                 }.onTapGesture {
-                    current = .trophy
+                    viewModel.setSlide(.trophy)
                 }.tag(Slide.points)
                 ZStack {
                     Image("podium")
@@ -49,9 +42,9 @@ struct StartView: View {
                         Text("you can use the points you collected to unlock avatars and characters")
                             .font(.body)
                     }
-                        .frame(width: 300)
                 }.onTapGesture {
-                    page = .home
+                    print(UserDefaults.standard.bool(forKey: "userOnboarded"))
+                    mainvm.setPage(.home)
                 }.tag(Slide.trophy)
             }
             .tabViewStyle(.page)
@@ -60,9 +53,8 @@ struct StartView: View {
     }
 }
 
-struct StartView_Previews: PreviewProvider {
-    @State static var currentPage: Page = .start
+struct OnboardView_Previews: PreviewProvider {
     static var previews: some View {
-        StartView(page: $currentPage)
+        OnboardView()
     }
 }
