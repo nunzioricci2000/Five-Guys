@@ -4,7 +4,6 @@
 //
 //  Created by Nunzio Ricci on 18/10/22.
 //
-
 import SwiftUI
 
 struct OnboardView: View {
@@ -13,7 +12,7 @@ struct OnboardView: View {
     
     var body: some View {
         ZStack {
-            OnboardBackgroundView()
+            BackgroundView()
             TabView(selection: $viewModel.slide) {
                 OnboardGamesSlide().onTapGesture {
                         viewModel.setSlide( .points)

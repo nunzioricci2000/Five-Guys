@@ -14,7 +14,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                    Color.gray.ignoresSafeArea()
+                BackgroundView()
                 VStack {
                     Spacer()
                     Text("Welcome you on board, Lets roll now!")

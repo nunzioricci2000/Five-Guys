@@ -24,10 +24,12 @@ struct GamesView: View {
     
     var body: some View {
         ZStack {
-                Color.gray.ignoresSafeArea()
+            BackgroundView()
             VStack {
+                
                 Spacer()
-                Text("GAMES").font(.title)
+                Text("GAMES").fontWeight(.bold)
+                    .font(.system(size: 50, design: .rounded)).foregroundColor(.white)
                 Spacer()
                 Button {
                     mainvm.setPage(.level(.fivetiles(5)))
