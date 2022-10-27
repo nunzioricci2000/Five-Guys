@@ -2,39 +2,44 @@
 //  HomeView.swift
 //  Five Guys
 //
-//  Created by Nunzio Ricci on 19/10/22.
+//  Created by Nunzio Ricci on 26/10/22.
 //
 
 import SwiftUI
 
+precedencegroup PowerPrecedence { higherThan: MultiplicationPrecedence }
+infix operator ^^ : PowerPrecedence
+func ^^ (radix: Int, power: Int) -> Int {
+    return Int(pow(Double(radix), Double(power)))
+}
+
+let totalLevels: Int = 2 ^^ 25 - 1
+
 struct HomeView: View {
-    
-    @EnvironmentObject var mainvm: MainView.ViewModel
+    @EnvironmentObject var handler: PageHandler
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                    Color.gray.ignoresSafeArea()
-                VStack {
-                    Spacer()
-                    Text("Welcome you on board, Lets roll now!")
-                    Spacer()
-                    NavigationLink(destination: GamesView(), label: {
-                        Text("Games")
-                    }).buttonStyle(.borderedProminent)
-                    Spacer()
-                    NavigationLink(destination: GamesView(), label: {
-                        Text("Points")
-                    }).buttonStyle(.borderedProminent)
-                    Spacer()
-                }
+        ZStack {
+            Color("background").ignoresSafeArea()
+            VStack {
+                Title("Five Tiles")
+                    .padding(.bottom, 10)
+                Subtitle("Level 1 / \(totalLevels)")
+                Spacer()
+                MenuButton("PLAY")
+                    .onTapGesture {
+                        withAnimation {
+                            handler.page = .game
+                        }
+                    }
+                MenuButton("HISTORY")
+                Spacer()
             }
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
-    
     static var previews: some View {
         HomeView()
     }

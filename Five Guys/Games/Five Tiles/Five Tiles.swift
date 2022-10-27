@@ -42,8 +42,6 @@ struct FiveTilesView: View {
     
     var body: some View {
         VStack {
-            Text("Five Tiles")
-                .font(.title)
             Spacer()
             BoardView(board: game.board)
             .aspectRatio(contentMode: .fit)

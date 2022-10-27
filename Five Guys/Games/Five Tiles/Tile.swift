@@ -29,17 +29,32 @@ struct TileView: View {
     @Binding var tile: Tile
     @Binding var board: Board?
     var corners: UIRectCorner = []
+    
     var body: some View {
-        RoundedCornersShape(corners: corners, radius: 100)
-            .fill((tile.value ? Color.yellow : .gray).gradient)
-            .onTapGesture {
+        ZStack {
+            RoundedCornersShape(corners: corners, radius: 100)
+                .fill(.black)
+                .cornerRadius(10)
+                .zIndex(0)
+            if !tile.value {
+                RoundedCornersShape(corners: corners, radius: 100)
+                    .fill(.white)
+                    .cornerRadius(5)
+                    .padding(5)
+                    .transition(.scale.animation(.linear(duration: 0.2)))
+                    .zIndex(1)
+            }
+        }
+        .aspectRatio(contentMode: .fit)
+        .onTapGesture {
+            withAnimation {
                 if tile.position != nil {
                     board!.tap(tile.position!)
                 } else {
                     tile.invert()
                 }
-            }.aspectRatio(contentMode: .fit)
-            .cornerRadius(10)
+            }
+        }
     }
 }
 

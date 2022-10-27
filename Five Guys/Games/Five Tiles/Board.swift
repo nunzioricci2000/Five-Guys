@@ -10,6 +10,7 @@ import SwiftUI
 struct Board {
     var _board: [[Tile]] = [[Tile]]()
     var width, height: Int
+    var taps: Binding<Int>? = nil
     
     init(_ width: Int = 5,_ height: Int = 5) {
         self.width = width
@@ -40,6 +41,11 @@ struct Board {
         if (0..<(height-1)).contains(y) {
             _board[y+1][x].invert()
         }
+    }
+    
+    mutating private func tap(x: Int, y: Int) {
+        tap(x, y)
+        taps?.wrappedValue += 1
     }
     
     mutating func tap(_ position: (Int, Int)) {

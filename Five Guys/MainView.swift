@@ -7,30 +7,27 @@
 
 import SwiftUI
 
-
-
 struct MainView: View {
-    @StateObject var mainvm = ViewModel()
+    @StateObject var handler: PageHandler = PageHandler()
     
     var body: some View {
-        ZStack {
-            Color.blue
-                .ignoresSafeArea()
-            Group {
-                switch mainvm.page {
-                case .onboard: OnboardView()
-                case .home: HomeView()
-                case .games: GamesView()
-                case .level(let id):
-                    LevelHandlerView(id: id)
-                }
-            }.environmentObject(mainvm)
-        }
+        HStack {
+            switch handler.page {
+            case .home:
+                HomeView()
+                    .transition(.move(edge: .leading))
+            default:
+                GameView()
+                    .transition(.move(edge: .trailing))
+            }
+        }.environmentObject(handler)
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        VStack {
+            MainView()
+        }
     }
 }
