@@ -12,7 +12,10 @@ struct GameView: View {
     
     var body: some View {
         ZStack {
-            Color("background").ignoresSafeArea()
+            Color
+                .white
+                .opacity(0)
+                .ignoresSafeArea()
             VStack {
                 HStack {
                     BackIcon()

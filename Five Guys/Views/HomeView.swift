@@ -20,7 +20,10 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            Color("background").ignoresSafeArea()
+            Color
+                .white
+                .opacity(0)
+                .ignoresSafeArea()
             VStack {
                 Title("Five Tiles")
                     .padding(.bottom, 10)
@@ -31,13 +34,13 @@ struct HomeView: View {
                         withAnimation {
                             handler.page = .game
                         }
-                    }
+                    }.padding(40)
                 MenuButton("HISTORY")
                     .onTapGesture {
                         withAnimation {
                             handler.page = .history
                         }
-                    }
+                    }.padding(40)
                 Spacer()
             }
         }

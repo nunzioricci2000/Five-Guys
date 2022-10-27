@@ -8,24 +8,22 @@
 import SwiftUI
 
 struct MenuButton: View {
-    let title: String
+    @State var title: String
     
     init(_ title: String) {
         self.title = title
     }
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .cornerRadius(20)
-                .foregroundColor(Color("main"))
-                .padding(10)
-                .frame(width: 300, height: 100)
-            Text(title)
-                .font(.system(size: 35, design: .rounded))
-                .foregroundColor(Color("background"))
-                .fontWeight(.semibold)
-        }
+        Text(title)
+            .font(.system(size: 35, design: .rounded))
+            .foregroundColor(Color("main"))
+            .fontWeight(.semibold)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color("main"), lineWidth: 5)
+                    .frame(width: 300, height: 100)
+            )
     }
 }
 

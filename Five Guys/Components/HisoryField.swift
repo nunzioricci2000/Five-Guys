@@ -17,22 +17,21 @@ struct HisoryField: View {
     
     var body: some View {
         ZStack {
-            Rectangle()
-                .cornerRadius(20)
-                .foregroundColor(Color("main"))
-                .padding(10)
-                .frame(width: 300, height: 100)
             HStack {
                 Text("LEVEL: \( level )")
                     .font(.system(size: 20, design: .rounded))
-                    .foregroundColor(Color("background"))
+                    .foregroundColor(Color("main"))
                     .fontWeight(.semibold).padding(5)
                 Text("TAPS: \( taps )")
                     .font(.system(size: 20, design: .rounded))
-                    .foregroundColor(Color("background"))
+                    .foregroundColor(Color("main"))
                     .fontWeight(.semibold)
                     .padding(5)
-            }
+            }.overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color("main"), lineWidth: 5)
+                    .frame(width: 300, height: 100)
+            )
         }
     }
 }
