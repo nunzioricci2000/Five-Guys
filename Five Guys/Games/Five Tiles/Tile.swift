@@ -43,8 +43,9 @@ struct TileView: View {
                     .padding(5)
                     .transition(.scale.animation(.linear(duration: 0.2)))
                     .zIndex(1)
+                    .blendMode(.destinationOut)
             }
-        }
+        }.compositingGroup()
         .aspectRatio(contentMode: .fit)
         .onTapGesture {
             withAnimation {
@@ -64,24 +65,27 @@ struct TileView_Previews: PreviewProvider{
     @State static var board: Board? = nil
     
     static var previews: some View {
-        VStack {
-            Text("Tiles").font(.title)
-            Spacer()
-            HStack {
-                TileView(tile: $active, board: $board)
-                TileView(tile: $active, board: $board, corners: [.topLeft])
-                TileView(tile: $active, board: $board, corners: [.topRight])
-                TileView(tile: $active, board: $board, corners: [.bottomRight])
-                TileView(tile: $active, board: $board, corners: [.bottomLeft])
-            }
-            HStack {
-                TileView(tile: $inactive, board: $board)
-                TileView(tile: $inactive, board: $board, corners: [.topLeft])
-                TileView(tile: $inactive, board: $board, corners: [.topRight])
-                TileView(tile: $inactive, board: $board, corners: [.bottomRight])
-                TileView(tile: $inactive, board: $board, corners: [.bottomLeft])
-            }
-            Spacer()
-        }.padding()
+        ZStack {
+            Color.blue
+            VStack {
+                Text("Tiles").font(.title)
+                Spacer()
+                HStack {
+                    TileView(tile: $active, board: $board)
+                    TileView(tile: $active, board: $board, corners: [.topLeft])
+                    TileView(tile: $active, board: $board, corners: [.topRight])
+                    TileView(tile: $active, board: $board, corners: [.bottomRight])
+                    TileView(tile: $active, board: $board, corners: [.bottomLeft])
+                }
+                HStack {
+                    TileView(tile: $inactive, board: $board)
+                    TileView(tile: $inactive, board: $board, corners: [.topLeft])
+                    TileView(tile: $inactive, board: $board, corners: [.topRight])
+                    TileView(tile: $inactive, board: $board, corners: [.bottomRight])
+                    TileView(tile: $inactive, board: $board, corners: [.bottomLeft])
+                }
+                Spacer()
+            }.padding()
+        }
     }
 }

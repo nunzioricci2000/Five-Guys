@@ -33,6 +33,11 @@ struct HomeView: View {
                         }
                     }
                 MenuButton("HISTORY")
+                    .onTapGesture {
+                        withAnimation {
+                            handler.page = .history
+                        }
+                    }
                 Spacer()
             }
         }

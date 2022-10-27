@@ -16,8 +16,11 @@ struct MainView: View {
             case .home:
                 HomeView()
                     .transition(.move(edge: .leading))
-            default:
+            case .game:
                 GameView()
+                    .transition(.move(edge: .trailing))
+            case .history:
+                HistoryView()
                     .transition(.move(edge: .trailing))
             }
         }.environmentObject(handler)
