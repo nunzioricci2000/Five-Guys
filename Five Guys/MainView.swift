@@ -16,8 +16,8 @@ struct MainView: View {
             case .home:
                 HomeView()
                     .transition(.move(edge: .leading))
-            case .game:
-                GameView()
+            case .game(let level):
+                GameView(level: level)
                     .transition(.move(edge: .trailing))
             case .history:
                 HistoryView()

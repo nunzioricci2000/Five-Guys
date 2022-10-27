@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     @EnvironmentObject var handler: PageHandler
-    
+    let level: Int
     var body: some View {
         ZStack {
             Color
@@ -39,6 +39,6 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(level: 1)
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum Page {
-    case home, game, history
+    case home, game(Int), history
 }
 
 @MainActor

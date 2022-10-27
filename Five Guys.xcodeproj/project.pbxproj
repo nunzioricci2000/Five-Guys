@@ -26,6 +26,7 @@
 		CDE464A8290ABA7D00AA8FB8 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A7290ABA7D00AA8FB8 /* HistoryView.swift */; };
 		CDE464AA290ABF0A00AA8FB8 /* HisoryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A9290ABF0A00AA8FB8 /* HisoryField.swift */; };
 		CDE464AC290B06DA00AA8FB8 /* isNumberString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */; };
+		CDE464AF290B366900AA8FB8 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464AE290B366900AA8FB8 /* Popup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		CDE464A7290ABA7D00AA8FB8 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		CDE464A9290ABF0A00AA8FB8 /* HisoryField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HisoryField.swift; sourceTree = "<group>"; };
 		CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isNumberString.swift; sourceTree = "<group>"; };
+		CDE464AE290B366900AA8FB8 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				CD77072628FF46C400659FFC /* Five_GuysApp.swift */,
+				CD7707342900934C00659FFC /* MainView.swift */,
 				CDE464AD290B1C8000AA8FB8 /* Views */,
 				CDE4649D290AB03E00AA8FB8 /* Components */,
 				CD5B304D29045A1000B9105C /* Custom */,
@@ -137,6 +140,7 @@
 				CDE464A3290AB36800AA8FB8 /* Title.swift */,
 				CDE464A5290AB52D00AA8FB8 /* Subtitle.swift */,
 				CDE464A9290ABF0A00AA8FB8 /* HisoryField.swift */,
+				CDE464AE290B366900AA8FB8 /* Popup.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -144,7 +148,6 @@
 		CDE464AD290B1C8000AA8FB8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CD7707342900934C00659FFC /* MainView.swift */,
 				CDE464952909D28F00AA8FB8 /* HomeView.swift */,
 				CDE464972909D2AC00AA8FB8 /* GameView.swift */,
 				CDE464A7290ABA7D00AA8FB8 /* HistoryView.swift */,
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDE464AF290B366900AA8FB8 /* Popup.swift in Sources */,
 				CD5B304F29045A4B00B9105C /* RoundedCornersShape.swift in Sources */,
 				CD5B304629043C6E00B9105C /* Tile.swift in Sources */,
 				CDE464A4290AB36800AA8FB8 /* Title.swift in Sources */,

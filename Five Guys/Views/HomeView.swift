@@ -32,7 +32,7 @@ struct HomeView: View {
                 MenuButton("PLAY")
                     .onTapGesture {
                         withAnimation {
-                            handler.page = .game
+                            handler.page = .game(1)
                         }
                     }.padding(40)
                 MenuButton("HISTORY")
