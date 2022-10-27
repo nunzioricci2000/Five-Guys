@@ -17,17 +17,20 @@ struct GameView: View {
                 .opacity(0)
                 .ignoresSafeArea()
             VStack {
-                HStack {
-                    BackIcon()
-                        .onTapGesture {
-                            withAnimation {
-                                handler.page = .home
+                ZStack {
+                    Subtitle("GAME")
+                    HStack {
+                        BackIcon()
+                            .onTapGesture {
+                                withAnimation {
+                                    handler.page = .home
+                                }
                             }
-                        }
-                    Spacer()
+                        Spacer()
+                    }
                 }
                 Spacer()
-                FiveTilesView()
+                FiveTilesView(game: FiveTiles())
                 Spacer()
             }
         }

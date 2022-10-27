@@ -7,20 +7,23 @@
 
 import SwiftUI
 
-struct FiveTiles {
-    enum GameState {
-        case play, end
-    }
+@MainActor
+class FiveTiles: ObservableObject {
     let difficulty: Int
-    var board: Board
-    var state: GameState = .play
+    @Published var board: Board = Board() {}
+    @Published var taps: Int = 0
+    
     init(_ difficulty: Int = 5) {
         self.difficulty = difficulty
-        self.board = Board(5,5)
+        self.taps = 0
+        self.board = Board() {
+            self.taps += 1
+        }
         new()
+        self.taps = 0
     }
     
-    private mutating func new() {
+    private func new() {
         let swipes = (0...(board.height * board.width - 1)).shuffled()[0..<difficulty]
         for swipe in swipes {
             let x = swipe % board.width
@@ -29,23 +32,20 @@ struct FiveTiles {
         }
     }
     
-    mutating private func checkWin() {
-        if board._board.allSatisfy({$0.allSatisfy({!$0.value})}) {
-            state = .end
-        }
+    private func win() -> Bool {
+        return board._board.allSatisfy({$0.allSatisfy({!$0.value})})
     }
-    
 }
 
+
 struct FiveTilesView: View {
-    @State var game = FiveTiles(5)
+    @StateObject var game: FiveTiles
     
     var body: some View {
         VStack {
+            Title("Tap: \(game.taps)")
             Spacer()
-            BoardView(board: game.board)
-            .aspectRatio(contentMode: .fit)
-                .padding()
+            BoardView(board: game.board).aspectRatio(contentMode: .fit).padding()
             Spacer()
         }
     }
@@ -53,6 +53,6 @@ struct FiveTilesView: View {
 
 struct FiveTilesView_Previews: PreviewProvider {
     static var previews: some View {
-        FiveTilesView()
+        FiveTilesView(game: FiveTiles())
     }
 }
