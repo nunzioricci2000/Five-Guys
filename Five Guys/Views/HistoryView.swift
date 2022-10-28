@@ -30,9 +30,11 @@ struct HistoryView: View {
                     
                     Subtitle("HISTORY")
                 }
-                Spacer()
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                Spacer()
+                ScrollView {
+                    ForEach(LevelInfo.levels, id:\.num) { level in
+                        HisoryField(level.num, level.tap).padding()
+                    }
+                }
             }
         }
     }

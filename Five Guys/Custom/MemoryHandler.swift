@@ -33,12 +33,9 @@ struct LevelInfo {
         UserDefaults.standard.set("\(tap)", forKey: "level\( num )")
     }
     
-    static func load(_ index: Int) -> LevelInfo? {
+    static func load(_ index: Int) -> LevelInfo {
         let str = UserDefaults.standard.string(forKey: "level\( index )")
-        if str == nil {
-            return nil
-        }
-        return LevelInfo.fromString(str!)
+        return LevelInfo(num: index, tap: Int(str ?? "0") ?? 0)
     }
     
     static var current: LevelInfo {
@@ -54,15 +51,25 @@ struct LevelInfo {
         }
     }
     
-    var levels: [LevelInfo] {
+    static var levels: [LevelInfo] {
         get {
             var i: Int = 1
             var result = [LevelInfo]()
-            while let level: LevelInfo = LevelInfo.load(i) {
+            while true {
+                let level: LevelInfo = LevelInfo.load(i)
+                if level.tap == 0 {
+                    break
+                }
                 result.append(level)
                 i += 1
             }
             return result
+        }
+    }
+    
+    var next: LevelInfo {
+        get {
+            return LevelInfo.load(num+1)
         }
     }
 }

@@ -11,6 +11,7 @@ let totalLevels: Int = 2 ^^ 25 - 1
 
 struct HomeView: View {
     @EnvironmentObject var handler: PageHandler
+    @StateObject var model = ViewModel()
     
     var body: some View {
         ZStack {
@@ -21,16 +22,15 @@ struct HomeView: View {
             VStack {
                 Title("Five Tiles")
                     .padding(.bottom, 10)
-                Subtitle("Level 1 / \(totalLevels)")
+                Subtitle("Level \( model.currentLevel.num ) / \(totalLevels)")
                 Spacer()
                 MenuButton("PLAY")
                     .onTapGesture {
                         withAnimation {
-                            handler.page = .game(1)
+                            handler.page = .game
                         }
                     }.padding(40)
-                MenuButton("HISTORY")
-                    .onTapGesture {
+                MenuButton("HISTORY").onTapGesture {
                         withAnimation {
                             handler.page = .history
                         }

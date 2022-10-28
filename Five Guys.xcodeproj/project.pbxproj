@@ -28,6 +28,8 @@
 		CDE464AC290B06DA00AA8FB8 /* isNumberString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */; };
 		CDE464AF290B366900AA8FB8 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464AE290B366900AA8FB8 /* Popup.swift */; };
 		CDE464B1290BC28900AA8FB8 /* IntegerPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464B0290BC28900AA8FB8 /* IntegerPower.swift */; };
+		CDE464B4290BC87E00AA8FB8 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464B3290BC87E00AA8FB8 /* GameViewModel.swift */; };
+		CDE464B6290BC94800AA8FB8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464B5290BC94800AA8FB8 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isNumberString.swift; sourceTree = "<group>"; };
 		CDE464AE290B366900AA8FB8 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		CDE464B0290BC28900AA8FB8 /* IntegerPower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerPower.swift; sourceTree = "<group>"; };
+		CDE464B3290BC87E00AA8FB8 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		CDE464B5290BC94800AA8FB8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,8 @@
 		CDE464B2290BC6E800AA8FB8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CDE464B5290BC94800AA8FB8 /* HomeViewModel.swift */,
+				CDE464B3290BC87E00AA8FB8 /* GameViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 				CDE4649C290A733D00AA8FB8 /* MemoryHandler.swift in Sources */,
 				CD7707352900934C00659FFC /* MainView.swift in Sources */,
 				CD77072728FF46C400659FFC /* Five_GuysApp.swift in Sources */,
+				CDE464B4290BC87E00AA8FB8 /* GameViewModel.swift in Sources */,
 				CDE4649A2909D5AB00AA8FB8 /* Page.swift in Sources */,
 				CDE464AC290B06DA00AA8FB8 /* isNumberString.swift in Sources */,
 				CDE464982909D2AC00AA8FB8 /* GameView.swift in Sources */,
@@ -251,6 +258,7 @@
 				CDE464A8290ABA7D00AA8FB8 /* HistoryView.swift in Sources */,
 				CDE464A6290AB52D00AA8FB8 /* Subtitle.swift in Sources */,
 				CDE464AA290ABF0A00AA8FB8 /* HisoryField.swift in Sources */,
+				CDE464B6290BC94800AA8FB8 /* HomeViewModel.swift in Sources */,
 				CDE464962909D28F00AA8FB8 /* HomeView.swift in Sources */,
 				CD5B304C2904417600B9105C /* Five Tiles.swift in Sources */,
 				CDE464A2290AB19800AA8FB8 /* MenuButton.swift in Sources */,

@@ -27,11 +27,10 @@ struct HisoryField: View {
                     .foregroundColor(Color("main"))
                     .fontWeight(.semibold)
                     .padding(5)
-            }.overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color("main"), lineWidth: 5)
-                    .frame(width: 300, height: 100)
-            )
+            }
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(Color("main"), lineWidth: 5)
+                .frame(width: 300, height: 100)
         }
     }
 }

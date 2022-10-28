@@ -11,13 +11,13 @@ struct MainView: View {
     @StateObject var handler: PageHandler = PageHandler()
     
     var body: some View {
-        HStack {
+         HStack {
             switch handler.page {
             case .home:
                 HomeView()
                     .transition(.move(edge: .leading))
-            case .game(let level):
-                GameView(level: level)
+            case .game:
+                GameView()
                     .transition(.move(edge: .trailing))
             case .history:
                 HistoryView()

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct GameView: View {
     @EnvironmentObject var handler: PageHandler
-    let level: Int
+    @StateObject var model = ViewModel(level: LevelInfo.current)
+    
     var body: some View {
         ZStack {
             Color
@@ -30,7 +31,7 @@ struct GameView: View {
                     }
                 }
                 Spacer()
-                FiveTilesView(game: FiveTiles(level))
+                FiveTilesView(game: FiveTiles(model.level.num))
                 Spacer()
             }
         }
@@ -39,6 +40,6 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView(level: 1)
+        GameView()
     }
 }

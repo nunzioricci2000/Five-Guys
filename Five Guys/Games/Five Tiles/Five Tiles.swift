@@ -15,13 +15,13 @@ func magicAlgorithm(_ level: Int) -> Int {
 class FiveTiles: ObservableObject {
     let level: Int
     @Published var board: Board = Board() {}
-    @Published var taps: Int = 0
+    @Published var taps: Int = LevelInfo.current.tap
     
     init(_ level: Int) {
         self.level = level
-        self.taps = 0
         self.board = Board() {
             self.taps += 1
+            LevelInfo.current = self.toLevelInfo()
             if self.win() {
                 withAnimation {
                     self.onWin()
@@ -29,7 +29,8 @@ class FiveTiles: ObservableObject {
             }
         }
         new()
-        self.taps = 0
+        self.taps = LevelInfo.current.tap
+        LevelInfo.current = self.toLevelInfo()
     }
     
     private func new() {
@@ -52,12 +53,18 @@ class FiveTiles: ObservableObject {
         return board._board.allSatisfy({$0.allSatisfy({!$0.value})})
     }
     
+    func toLevelInfo() -> LevelInfo {
+        return LevelInfo(num: self.level, tap: self.taps)
+    }
+    
     private func onWin() {
         for x in (0..<board.width) {
             for y in (0..<board.height) {
                 board._board[y][x].onTap = {}
             }
         }
+        self.toLevelInfo().save()
+        LevelInfo.current = self.toLevelInfo().next
     }
 }
 
@@ -83,7 +90,7 @@ struct FiveTilesView: View {
                     }
                 }, onTap2: {
                     withAnimation {
-                        handler.page = .game(2)
+                        handler.page = .game
                     }
                 })
             }
