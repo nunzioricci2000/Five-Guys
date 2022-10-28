@@ -18,11 +18,16 @@ struct Subtitle: View {
         Text(text)
             .font(.system(size: 20, design: .rounded))
             .fontWeight(.bold)
+            .foregroundColor(Color("main"))
     }
 }
 
 struct Subtitle_Previews: PreviewProvider {
     static var previews: some View {
-        Subtitle("Level 1 / 10000000")
+        ZStack {
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
+            Subtitle("Level 1 / 10000000")
+        }
     }
 }

@@ -23,11 +23,16 @@ struct BackIcon: View {
             .font(.system(size: size))
             .fontWeight(fontWeigth)
             .padding(padding)
+            .foregroundColor(Color("main"))
     }
 }
 
 struct BackIcon_Previews: PreviewProvider {
     static var previews: some View {
-        BackIcon()
+        ZStack {
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
+            BackIcon()
+        }
     }
 }

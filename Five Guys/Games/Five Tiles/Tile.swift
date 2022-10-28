@@ -30,7 +30,7 @@ struct TileView: View {
     var body: some View {
         ZStack {
             RoundedCornersShape(corners: tile.corners, radius: 100)
-                .fill(.black)
+                .fill(Color("main"))
                 .cornerRadius(10)
                 .zIndex(0)
             if !tile.value {
@@ -52,7 +52,8 @@ struct TileView_Previews: PreviewProvider{
     
     static var previews: some View {
         ZStack {
-            Color.blue.ignoresSafeArea()
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
             VStack {
                 Text("Tiles").font(.title)
                 Spacer()

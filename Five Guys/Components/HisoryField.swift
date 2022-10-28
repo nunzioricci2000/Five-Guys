@@ -37,6 +37,10 @@ struct HisoryField: View {
 
 struct HisoryField_Previews: PreviewProvider {
     static var previews: some View {
-        HisoryField(10, 34)
+        ZStack {
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
+            HisoryField(10, 34)
+        }
     }
 }

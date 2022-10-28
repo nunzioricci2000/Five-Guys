@@ -14,5 +14,9 @@ extension GameView {
         init(level: LevelInfo) {
             self.level = level
         }
+        
+        func next() {
+            level = level.next
+        }
     }
 }

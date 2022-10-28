@@ -20,15 +20,25 @@ struct MenuButton: View {
             .foregroundColor(Color("main"))
             .fontWeight(.semibold)
             .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color("main"), lineWidth: 5)
-                    .frame(width: 300, height: 100)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color("main"), lineWidth: 5)
+                        .frame(width: 300, height: 100)
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color("main").opacity(0.0001))
+                        .frame(width: 300, height: 100)
+                     
+                }
             )
     }
 }
 
 struct MenuButton_Previews: PreviewProvider {
     static var previews: some View {
-        MenuButton("PLAY!")
+        ZStack {
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
+            MenuButton("PLAY!")
+        }
     }
 }

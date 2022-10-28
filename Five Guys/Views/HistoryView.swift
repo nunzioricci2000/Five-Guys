@@ -12,9 +12,7 @@ struct HistoryView: View {
     
     var body: some View {
         ZStack {
-            Color
-                .white
-                .opacity(0)
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
                 .ignoresSafeArea()
             VStack {
                 ZStack {

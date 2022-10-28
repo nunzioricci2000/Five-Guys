@@ -20,9 +20,12 @@ struct HomeView: View {
                 .opacity(0)
                 .ignoresSafeArea()
             VStack {
-                Title("Five Tiles")
-                    .padding(.bottom, 10)
-                Subtitle("Level \( model.currentLevel.num ) / \(totalLevels)")
+                VStack {
+                    Title("Five Tiles")
+                        .padding(.bottom, 10)
+                    Subtitle("\(model.currentLevel.num - 1) levels completed")
+                    Subtitle(" \(totalLevels)")
+                }.offset(y:37)
                 Spacer()
                 MenuButton("PLAY")
                     .onTapGesture {
@@ -36,6 +39,7 @@ struct HomeView: View {
                         }
                     }.padding(40)
                 Spacer()
+                InfoButton()
             }
         }
     }
@@ -43,6 +47,10 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ZStack {
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
+            HomeView()
+        }
     }
 }

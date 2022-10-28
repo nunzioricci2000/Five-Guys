@@ -31,7 +31,7 @@ struct GameView: View {
                     }
                 }
                 Spacer()
-                FiveTilesView(game: FiveTiles(model.level.num))
+                FiveTilesView(game: FiveTiles(model.level.num)).transition(.slide)
                 Spacer()
             }
         }
@@ -40,6 +40,10 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        ZStack {
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
+            GameView()
+        }
     }
 }

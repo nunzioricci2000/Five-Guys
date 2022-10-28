@@ -11,19 +11,23 @@ struct MainView: View {
     @StateObject var handler: PageHandler = PageHandler()
     
     var body: some View {
-         HStack {
-            switch handler.page {
-            case .home:
-                HomeView()
-                    .transition(.move(edge: .leading))
-            case .game:
-                GameView()
-                    .transition(.move(edge: .trailing))
-            case .history:
-                HistoryView()
-                    .transition(.move(edge: .trailing))
-            }
-        }.environmentObject(handler)
+        ZStack {
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
+            HStack {
+                switch handler.page {
+                case .home:
+                    HomeView()
+                        .transition(.move(edge: .leading))
+                case .game:
+                    GameView()
+                        .transition(.move(edge: .trailing))
+                case .history:
+                    HistoryView()
+                        .transition(.move(edge: .trailing))
+                }
+            }.environmentObject(handler)
+        }
     }
 }
 

@@ -1,33 +1,27 @@
 //
-//  Title.swift
+//  InfoButton.swift
 //  Five Guys
 //
-//  Created by Nunzio Ricci on 27/10/22.
+//  Created by Nunzio Ricci on 28/10/22.
 //
 
 import SwiftUI
 
-struct Title: View {
-    var text: String
-    
-    init(_ text: String) {
-        self.text = text
-    }
-    
+struct InfoButton: View {
     var body: some View {
-        Text(text)
+        Image(systemName: "info.circle")
             .font(.system(size: 50, design: .rounded))
-            .fontWeight(.semibold)
             .foregroundColor(Color("main"))
     }
 }
 
-struct Title_Previews: PreviewProvider {
+struct InfoButton_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
                 .ignoresSafeArea()
-            Title("FIVE TILES")
+            
+            InfoButton()
         }
     }
 }

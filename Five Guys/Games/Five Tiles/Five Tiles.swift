@@ -72,6 +72,7 @@ class FiveTiles: ObservableObject {
 struct FiveTilesView: View {
     @EnvironmentObject var handler: PageHandler
     @StateObject var game: FiveTiles
+    let onNext: ()->() = {}
     
     var body: some View {
         ZStack {
@@ -100,6 +101,10 @@ struct FiveTilesView: View {
 
 struct FiveTilesView_Previews: PreviewProvider {
     static var previews: some View {
-        FiveTilesView(game: FiveTiles(5))
+        ZStack {
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
+            FiveTilesView(game: FiveTiles(1))
+        }
     }
 }

@@ -14,7 +14,7 @@ struct Popup: View {
     
     var body: some View {
         ZStack {
-            Color.white.opacity(0.5)
+            // Color.white.opacity(0.5)
             VStack {
                 Spacer()
                 Subtitle(line1)
@@ -41,6 +41,8 @@ struct Popup: View {
 struct Popup_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
             BoardView(board: Board() {})
                 .blur(radius: 10)
             Popup(line1: "Level Complete", line2: "Taps done: 36", label1: "Home", label2: "Next", onTap1: {}, onTap2: {})

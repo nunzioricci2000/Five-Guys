@@ -87,12 +87,18 @@ struct BoardView: View {
 
 struct BoardView_Previews: PreviewProvider{
     static var previews: some View {
-        VStack {
-            Text("Tiles").font(.title)
-            Spacer()
-            BoardView(board: Board() {})
-            Spacer()
-        }.padding()
+        ZStack {
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
+            VStack {
+                VStack {
+                    Text("Tiles").font(.title)
+                    Spacer()
+                    BoardView(board: Board() {})
+                    Spacer()
+                }.padding()
+            }
+        }
     }
 }
 
