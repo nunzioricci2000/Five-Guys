@@ -30,7 +30,7 @@ struct GameView: View {
                     }
                 }
                 Spacer()
-                FiveTilesView(game: FiveTiles())
+                FiveTilesView(game: FiveTiles(level))
                 Spacer()
             }
         }

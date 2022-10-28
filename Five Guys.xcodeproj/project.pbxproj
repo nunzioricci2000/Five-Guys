@@ -27,6 +27,7 @@
 		CDE464AA290ABF0A00AA8FB8 /* HisoryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A9290ABF0A00AA8FB8 /* HisoryField.swift */; };
 		CDE464AC290B06DA00AA8FB8 /* isNumberString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */; };
 		CDE464AF290B366900AA8FB8 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464AE290B366900AA8FB8 /* Popup.swift */; };
+		CDE464B1290BC28900AA8FB8 /* IntegerPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464B0290BC28900AA8FB8 /* IntegerPower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		CDE464A9290ABF0A00AA8FB8 /* HisoryField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HisoryField.swift; sourceTree = "<group>"; };
 		CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isNumberString.swift; sourceTree = "<group>"; };
 		CDE464AE290B366900AA8FB8 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		CDE464B0290BC28900AA8FB8 /* IntegerPower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerPower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				CDE464992909D5AB00AA8FB8 /* Page.swift */,
 				CDE4649B290A733D00AA8FB8 /* MemoryHandler.swift */,
 				CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */,
+				CDE464B0290BC28900AA8FB8 /* IntegerPower.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -114,6 +117,7 @@
 			children = (
 				CD77072628FF46C400659FFC /* Five_GuysApp.swift */,
 				CD7707342900934C00659FFC /* MainView.swift */,
+				CDE464B2290BC6E800AA8FB8 /* Models */,
 				CDE464AD290B1C8000AA8FB8 /* Views */,
 				CDE4649D290AB03E00AA8FB8 /* Components */,
 				CD5B304D29045A1000B9105C /* Custom */,
@@ -153,6 +157,13 @@
 				CDE464A7290ABA7D00AA8FB8 /* HistoryView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CDE464B2290BC6E800AA8FB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +238,7 @@
 			files = (
 				CDE464AF290B366900AA8FB8 /* Popup.swift in Sources */,
 				CD5B304F29045A4B00B9105C /* RoundedCornersShape.swift in Sources */,
+				CDE464B1290BC28900AA8FB8 /* IntegerPower.swift in Sources */,
 				CD5B304629043C6E00B9105C /* Tile.swift in Sources */,
 				CDE464A4290AB36800AA8FB8 /* Title.swift in Sources */,
 				CDE4649C290A733D00AA8FB8 /* MemoryHandler.swift in Sources */,

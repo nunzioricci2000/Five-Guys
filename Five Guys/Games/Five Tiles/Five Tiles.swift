@@ -7,19 +7,25 @@
 
 import SwiftUI
 
+func magicAlgorithm(_ level: Int) -> Int {
+    return (27^^(level-1)) ^ 0x1001
+}
+
 @MainActor
 class FiveTiles: ObservableObject {
     let level: Int
     @Published var board: Board = Board() {}
     @Published var taps: Int = 0
     
-    init(_ difficulty: Int = 5) {
-        self.level = difficulty
+    init(_ level: Int) {
+        self.level = level
         self.taps = 0
         self.board = Board() {
             self.taps += 1
             if self.win() {
-                self.onWin()
+                withAnimation {
+                    self.onWin()
+                }
             }
         }
         new()
@@ -27,7 +33,14 @@ class FiveTiles: ObservableObject {
     }
     
     private func new() {
-        let swipes = (0...(board.height * board.width - 1)).shuffled()[0..<level]
+        var magicNumber = magicAlgorithm(level)
+        var swipes: [Int] = []
+        for i in (0..<25) {
+            if (magicNumber % 2) != 0 {
+                swipes.append(i)
+            }
+            magicNumber /= 2
+        }
         for swipe in swipes {
             let x = swipe % board.width
             let y = swipe / board.height
@@ -59,7 +72,7 @@ struct FiveTilesView: View {
                 Title("Tap: \(game.taps)")
                 Spacer()
                 BoardView(board: game.board)
-                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 350, height: 350)
                     .padding()
                 Spacer()
             }.blur(radius: game.win() ? 10 : 0)
@@ -80,6 +93,6 @@ struct FiveTilesView: View {
 
 struct FiveTilesView_Previews: PreviewProvider {
     static var previews: some View {
-        FiveTilesView(game: FiveTiles())
+        FiveTilesView(game: FiveTiles(5))
     }
 }
