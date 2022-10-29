@@ -21,13 +21,13 @@ func 🪄MAGIC🪄Algorithm(_ level: Int) -> Int {
 class FiveTiles: ObservableObject {
     let level: Int
     @Published var board: Board = Board() {}
-    @Published var taps: Int = LevelInfo.current.tap
+    @Published var taps: Int = Memory.handler.current.tap
     
     init(_ level: Int) {
         self.level = level
         self.board = Board() {
             self.taps += 1
-            LevelInfo.current = self.toLevelInfo()
+            Memory.handler.current = self.toLevelInfo()
             if self.win() {
                 withAnimation {
                     self.onWin()
@@ -35,8 +35,8 @@ class FiveTiles: ObservableObject {
             }
         }
         new()
-        self.taps = LevelInfo.current.tap
-        LevelInfo.current = self.toLevelInfo()
+        self.taps = Memory.handler.current.tap
+        Memory.handler.current = self.toLevelInfo()
     }
     
     private func new() {
@@ -70,7 +70,7 @@ class FiveTiles: ObservableObject {
             }
         }
         self.toLevelInfo().save()
-        LevelInfo.current = self.toLevelInfo().next
+        Memory.handler.current = self.toLevelInfo().next
     }
 }
 

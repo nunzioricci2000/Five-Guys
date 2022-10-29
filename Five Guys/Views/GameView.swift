@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     @EnvironmentObject var handler: PageHandler
-    @StateObject var model = ViewModel(level: LevelInfo.current)
+    @StateObject var model = ViewModel(level: Memory.handler.current)
     
     var body: some View {
         ZStack {

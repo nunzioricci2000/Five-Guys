@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-struct LevelInfo {
-    private(set) var num: Int
-    private(set) var tap: Int
+class LevelInfo: ObservableObject {
+    @Published private(set) var num: Int
+    @Published private(set) var tap: Int
     
-    func toString() -> String {
-        return "\(num):\(tap)"
+    init(num: Int, tap: Int) {
+        self.num = num
+        self.tap = tap
     }
     
-    static func fromString(_ str: String) -> LevelInfo? {
+    init?(_ str: String) {
         let comp = str.components(separatedBy: ":")
         guard comp.count == 2 else {
             return nil
@@ -23,40 +24,73 @@ struct LevelInfo {
         guard comp[0].isNumber, comp[1].isNumber else {
             return nil
         }
-        let num, tap: Int
-        num = Int(comp[0])!
-        tap = Int(comp[1])!
-        return LevelInfo(num: num,tap: tap)
+        self.num = Int(comp[0])!
+        self.tap = Int(comp[1])!
+    }
+    
+    func toString() -> String {
+        return "\(num):\(tap)"
     }
     
     func save() {
-        UserDefaults.standard.set("\(tap)", forKey: "level\( num )")
+        Memory.handler.save(self)
     }
     
     static func load(_ index: Int) -> LevelInfo {
-        let str = UserDefaults.standard.string(forKey: "level\( index )")
+        return Memory.handler.load(index)
+    }
+    
+    var next: LevelInfo {
+        get {
+            return LevelInfo.load(num+1)
+        }
+    }
+}
+
+class Memory: ObservableObject {
+    private(set) static var handler = Memory()
+    private init() {}
+    
+    @Published var accesses:Int = 0
+    
+    func write(_ text: String,forKey key: String) {
+        accesses += 1
+        UserDefaults.standard.set(text, forKey: key)
+    }
+    
+    func read(_ key: String) -> String? {
+        accesses += 1
+        return UserDefaults.standard.string(forKey: key)
+    }
+    
+    func save(_ level: LevelInfo) {
+        Memory.handler.write("\( level.tap )", forKey: "level\( level.num )")
+    }
+    
+    func load(_ index: Int) -> LevelInfo {
+        let str = read("level\( index )")
         return LevelInfo(num: index, tap: Int(str ?? "0") ?? 0)
     }
     
-    static var current: LevelInfo {
+    var current: LevelInfo {
         get {
-            let str = UserDefaults.standard.string(forKey: "current")
+            let str = read("current")
             if str == nil {
                 return LevelInfo(num: 1, tap: 0)
             }
-            return LevelInfo.fromString(str!)!
+            return LevelInfo(str!)!
         }
         set {
-            UserDefaults.standard.set(newValue.toString(), forKey: "current")
+            write(newValue.toString(), forKey: "current")
         }
     }
     
-    static var levels: [LevelInfo] {
+    var levels: [LevelInfo] {
         get {
             var i: Int = 1
             var result = [LevelInfo]()
             while true {
-                let level: LevelInfo = LevelInfo.load(i)
+                let level: LevelInfo = load(i)
                 if level.tap == 0 {
                     break
                 }
@@ -67,10 +101,5 @@ struct LevelInfo {
         }
     }
     
-    var next: LevelInfo {
-        get {
-            return LevelInfo.load(num+1)
-        }
-    }
+    
 }
-

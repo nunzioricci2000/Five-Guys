@@ -9,7 +9,6 @@ import Foundation
 
 extension HomeView {
     @MainActor class ViewModel: ObservableObject {
-        
-        @Published var currentLevel: LevelInfo = LevelInfo.current
+        @Published var currentLevel: Int = Memory.handler.current.num
     }
 }

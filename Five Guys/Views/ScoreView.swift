@@ -30,9 +30,9 @@ struct ScoreView: View {
                 }
                 ScrollView {
                     
-                    Subtitle("\(LevelInfo.current.num - 1) levels completed")
-                    Subtitle("\(totalLevels + 1 - LevelInfo.current.num) remained")
-                    ForEach(LevelInfo.levels, id:\.num) { level in
+                    Subtitle("\(Memory.handler.current.num - 1) levels completed")
+                    Subtitle("\(totalLevels + 1 - Memory.handler.current.num) remained")
+                    ForEach(Memory.handler.levels, id:\.num) { level in
                         ScoreField(level.num, level.tap).padding()
                     }
                 }
