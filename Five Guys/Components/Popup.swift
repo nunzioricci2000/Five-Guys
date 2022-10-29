@@ -41,7 +41,7 @@ struct Popup: View {
 struct Popup_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+            Background()
                 .ignoresSafeArea()
             BoardView(board: Board() {})
                 .blur(radius: 10)

@@ -30,8 +30,7 @@ struct BackIcon: View {
 struct BackIcon_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
-                .ignoresSafeArea()
+            Background()
             BackIcon()
         }
     }

@@ -30,7 +30,7 @@ struct HistoryView: View {
                 }
                 ScrollView {
                     ForEach(LevelInfo.levels, id:\.num) { level in
-                        HisoryField(level.num, level.tap).padding()
+                        ScoreField(level.num, level.tap).padding()
                     }
                 }
             }

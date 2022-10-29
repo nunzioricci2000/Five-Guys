@@ -16,6 +16,9 @@
 		CD77072E28FF46C600659FFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD77072D28FF46C600659FFC /* Preview Assets.xcassets */; };
 		CD7707352900934C00659FFC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7707342900934C00659FFC /* MainView.swift */; };
 		CDA499B1290C210000545B93 /* InfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499B0290C210000545B93 /* InfoButton.swift */; };
+		CDA499BD290D507E00545B93 /* ShowModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499BC290D507E00545B93 /* ShowModal.swift */; };
+		CDA499BF290D517D00545B93 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499BE290D517D00545B93 /* Background.swift */; };
+		CDA499C1290D526800545B93 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499C0290D526800545B93 /* Paragraph.swift */; };
 		CDE464962909D28F00AA8FB8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464952909D28F00AA8FB8 /* HomeView.swift */; };
 		CDE464982909D2AC00AA8FB8 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464972909D2AC00AA8FB8 /* GameView.swift */; };
 		CDE4649A2909D5AB00AA8FB8 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464992909D5AB00AA8FB8 /* Page.swift */; };
@@ -25,7 +28,7 @@
 		CDE464A4290AB36800AA8FB8 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A3290AB36800AA8FB8 /* Title.swift */; };
 		CDE464A6290AB52D00AA8FB8 /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A5290AB52D00AA8FB8 /* Subtitle.swift */; };
 		CDE464A8290ABA7D00AA8FB8 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A7290ABA7D00AA8FB8 /* HistoryView.swift */; };
-		CDE464AA290ABF0A00AA8FB8 /* HisoryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A9290ABF0A00AA8FB8 /* HisoryField.swift */; };
+		CDE464AA290ABF0A00AA8FB8 /* ScoreField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A9290ABF0A00AA8FB8 /* ScoreField.swift */; };
 		CDE464AC290B06DA00AA8FB8 /* isNumberString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */; };
 		CDE464AF290B366900AA8FB8 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464AE290B366900AA8FB8 /* Popup.swift */; };
 		CDE464B1290BC28900AA8FB8 /* IntegerPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464B0290BC28900AA8FB8 /* IntegerPower.swift */; };
@@ -44,6 +47,9 @@
 		CD77072D28FF46C600659FFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD7707342900934C00659FFC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CDA499B0290C210000545B93 /* InfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButton.swift; sourceTree = "<group>"; };
+		CDA499BC290D507E00545B93 /* ShowModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowModal.swift; sourceTree = "<group>"; };
+		CDA499BE290D517D00545B93 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		CDA499C0290D526800545B93 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
 		CDE464952909D28F00AA8FB8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CDE464972909D2AC00AA8FB8 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		CDE464992909D5AB00AA8FB8 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
@@ -53,7 +59,7 @@
 		CDE464A3290AB36800AA8FB8 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		CDE464A5290AB52D00AA8FB8 /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
 		CDE464A7290ABA7D00AA8FB8 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
-		CDE464A9290ABF0A00AA8FB8 /* HisoryField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HisoryField.swift; sourceTree = "<group>"; };
+		CDE464A9290ABF0A00AA8FB8 /* ScoreField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreField.swift; sourceTree = "<group>"; };
 		CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isNumberString.swift; sourceTree = "<group>"; };
 		CDE464AE290B366900AA8FB8 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		CDE464B0290BC28900AA8FB8 /* IntegerPower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerPower.swift; sourceTree = "<group>"; };
@@ -145,13 +151,16 @@
 		CDE4649D290AB03E00AA8FB8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CDA499BE290D517D00545B93 /* Background.swift */,
 				CDE4649E290AB06300AA8FB8 /* BackIcon.swift */,
-				CDE464A1290AB19800AA8FB8 /* MenuButton.swift */,
-				CDE464A3290AB36800AA8FB8 /* Title.swift */,
-				CDE464A5290AB52D00AA8FB8 /* Subtitle.swift */,
-				CDE464A9290ABF0A00AA8FB8 /* HisoryField.swift */,
-				CDE464AE290B366900AA8FB8 /* Popup.swift */,
 				CDA499B0290C210000545B93 /* InfoButton.swift */,
+				CDE464A9290ABF0A00AA8FB8 /* ScoreField.swift */,
+				CDE464A1290AB19800AA8FB8 /* MenuButton.swift */,
+				CDA499C0290D526800545B93 /* Paragraph.swift */,
+				CDE464AE290B366900AA8FB8 /* Popup.swift */,
+				CDA499BC290D507E00545B93 /* ShowModal.swift */,
+				CDE464A5290AB52D00AA8FB8 /* Subtitle.swift */,
+				CDE464A3290AB36800AA8FB8 /* Title.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -253,18 +262,21 @@
 				CDA499B1290C210000545B93 /* InfoButton.swift in Sources */,
 				CDE4649C290A733D00AA8FB8 /* MemoryHandler.swift in Sources */,
 				CD7707352900934C00659FFC /* MainView.swift in Sources */,
+				CDA499BD290D507E00545B93 /* ShowModal.swift in Sources */,
 				CD77072728FF46C400659FFC /* Five_GuysApp.swift in Sources */,
 				CDE464B4290BC87E00AA8FB8 /* GameViewModel.swift in Sources */,
 				CDE4649A2909D5AB00AA8FB8 /* Page.swift in Sources */,
 				CDE464AC290B06DA00AA8FB8 /* isNumberString.swift in Sources */,
 				CDE464982909D2AC00AA8FB8 /* GameView.swift in Sources */,
+				CDA499BF290D517D00545B93 /* Background.swift in Sources */,
 				CDE4649F290AB06300AA8FB8 /* BackIcon.swift in Sources */,
 				CDE464A8290ABA7D00AA8FB8 /* HistoryView.swift in Sources */,
 				CDE464A6290AB52D00AA8FB8 /* Subtitle.swift in Sources */,
-				CDE464AA290ABF0A00AA8FB8 /* HisoryField.swift in Sources */,
+				CDE464AA290ABF0A00AA8FB8 /* ScoreField.swift in Sources */,
 				CDE464B6290BC94800AA8FB8 /* HomeViewModel.swift in Sources */,
 				CDE464962909D28F00AA8FB8 /* HomeView.swift in Sources */,
 				CD5B304C2904417600B9105C /* Five Tiles.swift in Sources */,
+				CDA499C1290D526800545B93 /* Paragraph.swift in Sources */,
 				CDE464A2290AB19800AA8FB8 /* MenuButton.swift in Sources */,
 				CD5B304829043C9300B9105C /* Board.swift in Sources */,
 			);

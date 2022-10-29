@@ -24,15 +24,16 @@ struct HomeView: View {
                     Title("Five Tiles")
                         .padding(.bottom, 10)
                     Subtitle("\(model.currentLevel.num - 1) levels completed")
-                    Subtitle(" \(totalLevels)")
+                    Subtitle("\(totalLevels + 1 - model.currentLevel.num) remained")
                 }.offset(y:37)
                 Spacer()
-                MenuButton("PLAY")
-                    .onTapGesture {
-                        withAnimation {
-                            handler.page = .game
-                        }
-                    }.padding(40)
+                Button {
+                    withAnimation {
+                        handler.page = .game
+                    }
+                } label: {
+                    MenuButton("PLAY")
+                }.padding(40)
                 MenuButton("HISTORY").onTapGesture {
                         withAnimation {
                             handler.page = .history

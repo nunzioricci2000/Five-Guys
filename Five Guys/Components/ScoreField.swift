@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HisoryField: View {
+struct ScoreField: View {
     var level, taps: Int
     
     init(_ level: Int,_ taps: Int) {
@@ -35,12 +35,11 @@ struct HisoryField: View {
     }
 }
 
-struct HisoryField_Previews: PreviewProvider {
+struct ScoreField_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
-                .ignoresSafeArea()
-            HisoryField(10, 34)
+            Background()
+            ScoreField(10, 34)
         }
     }
 }

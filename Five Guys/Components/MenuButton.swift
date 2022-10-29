@@ -36,8 +36,7 @@ struct MenuButton: View {
 struct MenuButton_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
-                .ignoresSafeArea()
+            Background()
             MenuButton("PLAY!")
         }
     }
