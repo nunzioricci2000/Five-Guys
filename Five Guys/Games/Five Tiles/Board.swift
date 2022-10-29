@@ -7,89 +7,98 @@
 
 import SwiftUI
 
-struct Board {
-    var _board: [[Tile]] = [[Tile]]()
-    var width, height: Int
+func roundedCorners(x: Int, y: Int, width: Int, height: Int) -> UIRectCorner {
+    var result = [UIRectCorner]()
+    if x == 0, y == 0 {
+        result.append(.topLeft)
+    }
+    if x == width-1, y == 0 {
+        result.append(.topRight)
+    }
+    if x == width-1, y == height-1 {
+        result.append(.bottomRight)
+    }
+    if x == 0, y == height-1 {
+        result.append(.bottomLeft)
+    }
+    return UIRectCorner(result)
+}
+
+@MainActor
+class Board: ObservableObject {
+    @Published var _board: [[Tile]] = [[Tile]]()
+    @Published var width: Int
+    @Published var height: Int
     
-    init(_ width: Int = 5,_ height: Int = 5) {
+    init(_ width: Int = 5,_ height: Int = 5, onTap: @escaping () -> ()) {
         self.width = width
         self.height = height
-        _board = Array(repeating: Array(repeating: Tile(0,0), count:width), count: height)
+        _board = Array(repeating: Array(repeating: Tile(), count:width), count: height)
         for x in (0..<width) {
             for y in (0..<height) {
-                _board[y][x] = Tile(x,y)
+                _board[y][x] = Tile(corners: roundedCorners(x: x, y: y, width: width, height: height)) {
+                    self.tap(x, y)
+                    onTap()
+                }
             }
         }
     }
     
-    mutating func tap(_ x: Int, _ y: Int) {
+    func tap(_ x: Int, _ y: Int) {
         guard (0...width-1).contains(x), (0...height-1).contains(y) else {
             return
         }
         
-        _board[y][x].invert()
+        _board[y][x].flip()
         if (1..<width).contains(x) {
-            _board[y][x-1].invert()
+            _board[y][x-1].flip()
         }
         if (0..<(width-1)).contains(x) {
-            _board[y][x+1].invert()
+            _board[y][x+1].flip()
         }
         if (1..<width).contains(y) {
-            _board[y-1][x].invert()
+            _board[y-1][x].flip()
         }
         if (0..<(height-1)).contains(y) {
-            _board[y+1][x].invert()
+            _board[y+1][x].flip()
         }
     }
     
-    mutating func tap(_ position: (Int, Int)) {
+    func tap(_ position: (Int, Int)) {
         tap(position.0, position.1)
     }
 }
 
 struct BoardView: View {
-    @State var board: Board
+    @StateObject var board: Board
     
     var body: some View {
         VStack {
             ForEach((0..<board.height), id: \.self) { y in
                 HStack {
                     ForEach(0..<board.width, id: \.self) { x in
-                        TileView(tile: $board._board[y][x], board: Binding<Board?>($board), corners: roundedCorners(x, y))
+                        TileView(tile: board._board[y][x])
                     }
                 }
             }
         }
     }
-    
-    func roundedCorners(_ x: Int, _ y: Int) -> UIRectCorner {
-        var result = [UIRectCorner]()
-        if x == 0, y == 0 {
-            result.append(.topLeft)
-        }
-        if x == board.width-1, y == 0 {
-            result.append(.topRight)
-        }
-        if x == board.width-1, y == board.height-1 {
-            result.append(.bottomRight)
-        }
-        if x == 0, y == board.height-1 {
-            result.append(.bottomLeft)
-        }
-        return UIRectCorner(result)
-    }
 }
 
 struct BoardView_Previews: PreviewProvider{
-    @State static var board: Board = Board()
-    
     static var previews: some View {
-        VStack {
-            Text("Tiles").font(.title)
-            Spacer()
-            BoardView(board: board)
-            Spacer()
-        }.padding()
+        ZStack {
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
+            VStack {
+                VStack {
+                    Text("Tiles").font(.title)
+                    Spacer()
+                    BoardView(board: Board() {})
+                    Spacer()
+                }.padding()
+            }
+        }
     }
 }
 

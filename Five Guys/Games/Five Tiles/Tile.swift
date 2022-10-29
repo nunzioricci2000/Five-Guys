@@ -7,66 +7,72 @@
 
 import SwiftUI
 
-struct Tile {
-    var value: Bool
-    let position: (Int, Int)?
+@MainActor
+class Tile: ObservableObject {
+    @Published var value: Bool
+    @Published var corners: UIRectCorner = []
+    @Published var onTap: (() -> ())?
     
-    init(_ x: Int? = nil, _ y: Int? = nil, value: Bool = false) {
-        if x != nil, y != nil {
-            position = (x!, y!)
-        } else {
-            position = nil
-        }
+    init(value: Bool = false, corners: UIRectCorner = [], onTap: Optional<() -> ()> = nil) {
         self.value = value
+        self.corners = corners
+        self.onTap = onTap
     }
     
-    mutating func invert() {
+    func flip() {
         value = !value
     }
 }
 
 struct TileView: View {
-    @Binding var tile: Tile
-    @Binding var board: Board?
-    var corners: UIRectCorner = []
+    @StateObject var tile: Tile
+    
     var body: some View {
-        RoundedCornersShape(corners: corners, radius: 100)
-            .fill((tile.value ? Color.yellow : .gray).gradient)
-            .onTapGesture {
-                if tile.position != nil {
-                    board!.tap(tile.position!)
-                } else {
-                    tile.invert()
-                }
-            }.aspectRatio(contentMode: .fit)
-            .cornerRadius(10)
+        ZStack {
+            RoundedCornersShape(corners: tile.corners, radius: 100)
+                .fill(Color("main"))
+                .cornerRadius(10)
+                .zIndex(0)
+            if !tile.value {
+                RoundedCornersShape(corners: tile.corners, radius: 100)
+                    .fill(.white)
+                    .cornerRadius(5)
+                    .padding(5)
+                    .transition(.scale.animation(.linear(duration: 0.2)))
+                    .zIndex(1)
+                    .blendMode(.destinationOut)
+            }
+        }.compositingGroup()
+        .aspectRatio(contentMode: .fit)
+        .onTapGesture(perform: tile.onTap ?? {tile.flip()} )
     }
 }
 
 struct TileView_Previews: PreviewProvider{
-    @State static var active = Tile(value: true)
-    @State static var inactive = Tile()
-    @State static var board: Board? = nil
     
     static var previews: some View {
-        VStack {
-            Text("Tiles").font(.title)
-            Spacer()
-            HStack {
-                TileView(tile: $active, board: $board)
-                TileView(tile: $active, board: $board, corners: [.topLeft])
-                TileView(tile: $active, board: $board, corners: [.topRight])
-                TileView(tile: $active, board: $board, corners: [.bottomRight])
-                TileView(tile: $active, board: $board, corners: [.bottomLeft])
-            }
-            HStack {
-                TileView(tile: $inactive, board: $board)
-                TileView(tile: $inactive, board: $board, corners: [.topLeft])
-                TileView(tile: $inactive, board: $board, corners: [.topRight])
-                TileView(tile: $inactive, board: $board, corners: [.bottomRight])
-                TileView(tile: $inactive, board: $board, corners: [.bottomLeft])
-            }
-            Spacer()
-        }.padding()
+        ZStack {
+            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
+                .ignoresSafeArea()
+            VStack {
+                Text("Tiles").font(.title)
+                Spacer()
+                HStack {
+                    TileView(tile: Tile(value: true))
+                    TileView(tile: Tile(value: true, corners: [.topLeft]))
+                    TileView(tile: Tile(value: true, corners: [.topRight]))
+                    TileView(tile: Tile(value: true, corners: [.bottomRight]))
+                    TileView(tile: Tile(value: true, corners: [.bottomLeft]))
+                }
+                HStack {
+                    TileView(tile: Tile())
+                    TileView(tile: Tile(corners: [.topLeft]))
+                    TileView(tile: Tile(corners: [.topRight]))
+                    TileView(tile: Tile(corners: [.bottomRight]))
+                    TileView(tile: Tile(corners: [.bottomLeft]))
+                }
+                Spacer()
+            }.padding()
+        }
     }
 }
