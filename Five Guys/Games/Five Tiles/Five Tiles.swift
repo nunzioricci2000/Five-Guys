@@ -7,8 +7,14 @@
 
 import SwiftUI
 
-func magicAlgorithm(_ level: Int) -> Int {
-    return (27^^(level-1)) ^ 0x1001
+func 🪄MAGIC🪄Algorithm(_ level: Int) -> Int {
+    var result: Int = 1
+    for _ in (1..<level) {
+        result &= 0x01FF_FFFF
+        result *= 27
+    }
+    result ^= 0x1001
+    return result
 }
 
 @MainActor
@@ -34,7 +40,7 @@ class FiveTiles: ObservableObject {
     }
     
     private func new() {
-        var magicNumber = magicAlgorithm(level)
+        var magicNumber = 🪄MAGIC🪄Algorithm(level)
         var swipes: [Int] = []
         for i in (0..<25) {
             if (magicNumber % 2) != 0 {
