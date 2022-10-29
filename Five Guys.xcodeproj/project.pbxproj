@@ -27,7 +27,7 @@
 		CDE464A2290AB19800AA8FB8 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A1290AB19800AA8FB8 /* MenuButton.swift */; };
 		CDE464A4290AB36800AA8FB8 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A3290AB36800AA8FB8 /* Title.swift */; };
 		CDE464A6290AB52D00AA8FB8 /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A5290AB52D00AA8FB8 /* Subtitle.swift */; };
-		CDE464A8290ABA7D00AA8FB8 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A7290ABA7D00AA8FB8 /* HistoryView.swift */; };
+		CDE464A8290ABA7D00AA8FB8 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A7290ABA7D00AA8FB8 /* ScoreView.swift */; };
 		CDE464AA290ABF0A00AA8FB8 /* ScoreField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A9290ABF0A00AA8FB8 /* ScoreField.swift */; };
 		CDE464AC290B06DA00AA8FB8 /* isNumberString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */; };
 		CDE464AF290B366900AA8FB8 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464AE290B366900AA8FB8 /* Popup.swift */; };
@@ -58,7 +58,7 @@
 		CDE464A1290AB19800AA8FB8 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		CDE464A3290AB36800AA8FB8 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		CDE464A5290AB52D00AA8FB8 /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
-		CDE464A7290ABA7D00AA8FB8 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		CDE464A7290ABA7D00AA8FB8 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		CDE464A9290ABF0A00AA8FB8 /* ScoreField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreField.swift; sourceTree = "<group>"; };
 		CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isNumberString.swift; sourceTree = "<group>"; };
 		CDE464AE290B366900AA8FB8 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 			children = (
 				CDE464952909D28F00AA8FB8 /* HomeView.swift */,
 				CDE464972909D2AC00AA8FB8 /* GameView.swift */,
-				CDE464A7290ABA7D00AA8FB8 /* HistoryView.swift */,
+				CDE464A7290ABA7D00AA8FB8 /* ScoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 				CDE464982909D2AC00AA8FB8 /* GameView.swift in Sources */,
 				CDA499BF290D517D00545B93 /* Background.swift in Sources */,
 				CDE4649F290AB06300AA8FB8 /* BackIcon.swift in Sources */,
-				CDE464A8290ABA7D00AA8FB8 /* HistoryView.swift in Sources */,
+				CDE464A8290ABA7D00AA8FB8 /* ScoreView.swift in Sources */,
 				CDE464A6290AB52D00AA8FB8 /* Subtitle.swift in Sources */,
 				CDE464AA290ABF0A00AA8FB8 /* ScoreField.swift in Sources */,
 				CDE464B6290BC94800AA8FB8 /* HomeViewModel.swift in Sources */,

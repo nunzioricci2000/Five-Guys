@@ -12,8 +12,7 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
-                .ignoresSafeArea()
+            Background()
             HStack {
                 switch handler.page {
                 case .home:
@@ -23,7 +22,7 @@ struct MainView: View {
                     GameView()
                         .transition(.move(edge: .trailing))
                 case .history:
-                    HistoryView()
+                    ScoreView()
                         .transition(.move(edge: .trailing))
                 }
             }.environmentObject(handler)

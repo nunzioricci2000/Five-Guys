@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HistoryView: View {
+struct ScoreView: View {
     @EnvironmentObject var handler: PageHandler
     
     var body: some View {
@@ -29,6 +29,9 @@ struct HistoryView: View {
                     Subtitle("HISTORY")
                 }
                 ScrollView {
+                    
+                    Subtitle("\(LevelInfo.current.num - 1) levels completed")
+                    Subtitle("\(totalLevels + 1 - LevelInfo.current.num) remained")
                     ForEach(LevelInfo.levels, id:\.num) { level in
                         ScoreField(level.num, level.tap).padding()
                     }
@@ -38,8 +41,8 @@ struct HistoryView: View {
     }
 }
 
-struct HistoryView_Previews: PreviewProvider {
+struct ScoreView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryView()
+        ScoreView()
     }
 }

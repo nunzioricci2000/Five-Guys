@@ -20,12 +20,9 @@ struct HomeView: View {
                 .opacity(0)
                 .ignoresSafeArea()
             VStack {
-                VStack {
-                    Title("Five Tiles")
-                        .padding(.bottom, 10)
-                    Subtitle("\(model.currentLevel.num - 1) levels completed")
-                    Subtitle("\(totalLevels + 1 - model.currentLevel.num) remained")
-                }.offset(y:37)
+                Title("Five Tiles")
+                    .padding(.bottom, 100)
+                    .offset(y:37)
                 Spacer()
                 Button {
                     withAnimation {
@@ -33,12 +30,13 @@ struct HomeView: View {
                     }
                 } label: {
                     MenuButton("PLAY", subtitle: "Level: \(model.currentLevel.num)")
-                }.padding(40)
+                }.padding()
                 MenuButton("HISTORY").onTapGesture {
-                        withAnimation {
-                            handler.page = .history
-                        }
-                    }.padding(40)
+                    withAnimation {
+                        handler.page = .history
+                    }
+                }.padding()
+                Spacer()
                 Spacer()
                 InfoButton()
             }
