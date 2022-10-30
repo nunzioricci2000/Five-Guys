@@ -32,7 +32,7 @@ struct ShowModal: View {
                     Subtitle("SCORE")
                     Spacer(minLength: 20)
                     Paragraph("This section helps in keeping track of the levels you completed and the number of taps taken to finish each level.")
-                }.padding()
+                }.padding(33)
             }
         }
     }

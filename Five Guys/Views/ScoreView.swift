@@ -12,8 +12,6 @@ struct ScoreView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
-                .ignoresSafeArea()
             VStack {
                 ZStack {
                     HStack {
@@ -26,7 +24,7 @@ struct ScoreView: View {
                         Spacer()
                     }
                     
-                    Subtitle("HISTORY")
+                    Subtitle("SCORE")
                 }
                 ScrollView {
                     
@@ -43,6 +41,9 @@ struct ScoreView: View {
 
 struct ScoreView_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreView()
+        ZStack {
+            Background()
+            ScoreView()
+        }
     }
 }

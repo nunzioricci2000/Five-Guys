@@ -31,7 +31,7 @@ struct HomeView: View {
                 } label: {
                     MenuButton("PLAY", subtitle: "Level: \(model.currentLevel)")
                 }.padding()
-                MenuButton("HISTORY").onTapGesture {
+                MenuButton("SCORE").onTapGesture {
                     withAnimation {
                         handler.page = .history
                     }
