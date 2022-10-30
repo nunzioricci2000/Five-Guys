@@ -19,7 +19,7 @@ struct BackIcon: View {
     }
     
     var body: some View {
-        Image(systemName: "xmark")
+        Image(systemName: "chevron.left")
             .font(.system(size: size))
             .fontWeight(fontWeigth)
             .padding(padding)
