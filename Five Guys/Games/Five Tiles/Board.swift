@@ -26,17 +26,17 @@ func roundedCorners(x: Int, y: Int, width: Int, height: Int) -> UIRectCorner {
 
 @MainActor
 class Board: ObservableObject {
-    @Published var _board: [[Tile]] = [[Tile]]()
+    @Published var _board: [[TileViewModel]] = [[TileViewModel]]()
     @Published var width: Int
     @Published var height: Int
     
     init(_ width: Int = 5,_ height: Int = 5, onTap: @escaping () -> ()) {
         self.width = width
         self.height = height
-        _board = Array(repeating: Array(repeating: Tile(), count:width), count: height)
+        _board = Array(repeating: Array(repeating: TileViewModel(), count:width), count: height)
         for x in (0..<width) {
             for y in (0..<height) {
-                _board[y][x] = Tile(corners: roundedCorners(x: x, y: y, width: width, height: height)) {
+                _board[y][x] = TileViewModel(corners: roundedCorners(x: x, y: y, width: width, height: height)) {
                     self.tap(x, y)
                     onTap()
                 }

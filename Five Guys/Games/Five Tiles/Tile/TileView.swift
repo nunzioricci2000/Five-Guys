@@ -1,31 +1,14 @@
 //
-//  Tile.swift
+//  TileView.swift
 //  Five Guys
 //
-//  Created by Nunzio Ricci on 22/10/22.
+//  Created by Nunzio Ricci on 30/10/22.
 //
 
 import SwiftUI
 
-@MainActor
-class Tile: ObservableObject {
-    @Published var value: Bool
-    @Published var corners: UIRectCorner = []
-    @Published var onTap: (() -> ())?
-    
-    init(value: Bool = false, corners: UIRectCorner = [], onTap: Optional<() -> ()> = nil) {
-        self.value = value
-        self.corners = corners
-        self.onTap = onTap
-    }
-    
-    func flip() {
-        value = !value
-    }
-}
-
 struct TileView: View {
-    @StateObject var tile: Tile
+    @StateObject var tile: TileViewModel
     
     var body: some View {
         ZStack {
@@ -58,18 +41,18 @@ struct TileView_Previews: PreviewProvider{
                 Text("Tiles").font(.title)
                 Spacer()
                 HStack {
-                    TileView(tile: Tile(value: true))
-                    TileView(tile: Tile(value: true, corners: [.topLeft]))
-                    TileView(tile: Tile(value: true, corners: [.topRight]))
-                    TileView(tile: Tile(value: true, corners: [.bottomRight]))
-                    TileView(tile: Tile(value: true, corners: [.bottomLeft]))
+                    TileView(tile: TileViewModel(value: true))
+                    TileView(tile: TileViewModel(value: true, corners: [.topLeft]))
+                    TileView(tile: TileViewModel(value: true, corners: [.topRight]))
+                    TileView(tile: TileViewModel(value: true, corners: [.bottomRight]))
+                    TileView(tile: TileViewModel(value: true, corners: [.bottomLeft]))
                 }
                 HStack {
-                    TileView(tile: Tile())
-                    TileView(tile: Tile(corners: [.topLeft]))
-                    TileView(tile: Tile(corners: [.topRight]))
-                    TileView(tile: Tile(corners: [.bottomRight]))
-                    TileView(tile: Tile(corners: [.bottomLeft]))
+                    TileView(tile: TileViewModel())
+                    TileView(tile: TileViewModel(corners: [.topLeft]))
+                    TileView(tile: TileViewModel(corners: [.topRight]))
+                    TileView(tile: TileViewModel(corners: [.bottomRight]))
+                    TileView(tile: TileViewModel(corners: [.bottomLeft]))
                 }
                 Spacer()
             }.padding()
