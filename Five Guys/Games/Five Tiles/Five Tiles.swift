@@ -28,6 +28,7 @@ class FiveTiles: ObservableObject {
         self.board = Board() {
             self.taps += 1
             Memory.handler.current = self.toLevelInfo()
+            HapticFlip.instance.impact(style: .light)
             if self.win() {
                 withAnimation {
                     self.onWin()
@@ -83,7 +84,7 @@ struct FiveTilesView: View {
     var body: some View {
         ZStack {
             VStack {
-                Title("Tap: \(game.taps)")
+                Title("Taps: \(game.taps)")
                 Spacer()
                 BoardView(board: game.board)
                     .frame(width: 350, height: 350)

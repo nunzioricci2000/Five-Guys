@@ -31,6 +31,12 @@ struct MainView: View {
                     .zIndex(1)
                     .blendMode(.destinationOut)
             }.compositingGroup()
+        }.onAppear {
+            UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+            
+            AppDelegate.orientationLock = .portrait
+        }.onDisappear {
+            AppDelegate.orientationLock = .all
         }
     }
 }

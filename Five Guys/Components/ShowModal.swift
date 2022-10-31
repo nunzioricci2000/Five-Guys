@@ -29,13 +29,13 @@ struct ShowModal: View {
                         
                         Subtitle("ABOUT FIVE TILES")
                         Spacer(minLength: 20)
-                        Paragraph("The game consists of 25 tiles. Tapping any of the tiles will flip it and the adjacent four tiles. The goal of the puzzle is to switch all the tiles off. Can you do it in as few taps as possible?")
+                        Paragraph("The game consists of 25 tiles. Tapping any of the tiles will flip it and the adjacent four tiles. The goal of the puzzle is to switch all the tiles off. To restart the level just go back in the main screen. The taps won’t reset. Can you do it in as few taps as possible?")
                         
                         Spacer(minLength: 50)
                         
                         Subtitle("SCORE")
                         Spacer(minLength: 20)
-                        Paragraph("This section helps in keeping track of the levels you completed and the number of taps taken to finish each level.")
+                        Paragraph("This section helps in keeping track of the levels and the number of taps taken to complete them.")
                     }.padding(33)
                 }
                 .zIndex(1)

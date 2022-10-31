@@ -14,6 +14,7 @@
 		CD071945291006C700DEBE64 /* MenuButtonTextHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071944291006C700DEBE64 /* MenuButtonTextHidden.swift */; };
 		CD0719472910072600DEBE64 /* MenuButtonTextHiddenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0719462910072600DEBE64 /* MenuButtonTextHiddenModel.swift */; };
 		CD071949291010C900DEBE64 /* Foreground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071948291010C900DEBE64 /* Foreground.swift */; };
+		CD2E73612910352200199AA3 /* HapticFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E73602910352200199AA3 /* HapticFlip.swift */; };
 		CD5B304629043C6E00B9105C /* TileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304529043C6E00B9105C /* TileViewModel.swift */; };
 		CD5B304829043C9300B9105C /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304729043C9300B9105C /* Board.swift */; };
 		CD5B304C2904417600B9105C /* Five Tiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304B2904417600B9105C /* Five Tiles.swift */; };
@@ -63,6 +64,7 @@
 		CD071944291006C700DEBE64 /* MenuButtonTextHidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonTextHidden.swift; sourceTree = "<group>"; };
 		CD0719462910072600DEBE64 /* MenuButtonTextHiddenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonTextHiddenModel.swift; sourceTree = "<group>"; };
 		CD071948291010C900DEBE64 /* Foreground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foreground.swift; sourceTree = "<group>"; };
+		CD2E73602910352200199AA3 /* HapticFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFlip.swift; sourceTree = "<group>"; };
 		CD5B304529043C6E00B9105C /* TileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewModel.swift; sourceTree = "<group>"; };
 		CD5B304729043C9300B9105C /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		CD5B304B2904417600B9105C /* Five Tiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Five Tiles.swift"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				CDE4649B290A733D00AA8FB8 /* MemoryHandler.swift */,
 				CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */,
 				CDE464B0290BC28900AA8FB8 /* IntegerPower.swift */,
+				CD2E73602910352200199AA3 /* HapticFlip.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				CDE464B6290BC94800AA8FB8 /* HomeViewModel.swift in Sources */,
 				CDE464962909D28F00AA8FB8 /* HomeView.swift in Sources */,
 				CD5B304C2904417600B9105C /* Five Tiles.swift in Sources */,
+				CD2E73612910352200199AA3 /* HapticFlip.swift in Sources */,
 				CDA499C1290D526800545B93 /* Paragraph.swift in Sources */,
 				CDE464A2290AB19800AA8FB8 /* MenuButton.swift in Sources */,
 				CD07193F290FEC5900DEBE64 /* MenuButtonRect.swift in Sources */,
@@ -455,6 +459,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Flippy Tiles";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -508,6 +513,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "Flippy Tiles";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -529,18 +535,21 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Five-Guys.Five-Guys";
+				PRODUCT_BUNDLE_IDENTIFIER = "Five-Guys.Flippy-Tiles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -558,18 +567,21 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Five-Guys.Five-Guys";
+				PRODUCT_BUNDLE_IDENTIFIER = "Five-Guys.Flippy-Tiles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

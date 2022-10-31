@@ -20,7 +20,7 @@ struct HomeView: View {
                 .opacity(0)
                 .ignoresSafeArea()
             VStack {
-                Title("Five Tiles")
+                Title("Flippy Tiles")
                     .padding(.bottom, 100)
                     .offset(y:37)
                 Spacer()
