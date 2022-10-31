@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD07193D290FEB9C00DEBE64 /* MenuButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07193C290FEB9C00DEBE64 /* MenuButtonText.swift */; };
+		CD07193F290FEC5900DEBE64 /* MenuButtonRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07193E290FEC5900DEBE64 /* MenuButtonRect.swift */; };
+		CD071941290FF02A00DEBE64 /* MenuButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071940290FF02A00DEBE64 /* MenuButtonModel.swift */; };
+		CD0719432910005900DEBE64 /* MenuButtonRectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0719422910005900DEBE64 /* MenuButtonRectModel.swift */; };
+		CD071945291006C700DEBE64 /* MenuButtonTextHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071944291006C700DEBE64 /* MenuButtonTextHidden.swift */; };
+		CD0719472910072600DEBE64 /* MenuButtonTextHiddenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0719462910072600DEBE64 /* MenuButtonTextHiddenModel.swift */; };
 		CD5B304629043C6E00B9105C /* TileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304529043C6E00B9105C /* TileViewModel.swift */; };
 		CD5B304829043C9300B9105C /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304729043C9300B9105C /* Board.swift */; };
 		CD5B304C2904417600B9105C /* Five Tiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304B2904417600B9105C /* Five Tiles.swift */; };
@@ -49,6 +55,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD07193C290FEB9C00DEBE64 /* MenuButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonText.swift; sourceTree = "<group>"; };
+		CD07193E290FEC5900DEBE64 /* MenuButtonRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonRect.swift; sourceTree = "<group>"; };
+		CD071940290FF02A00DEBE64 /* MenuButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonModel.swift; sourceTree = "<group>"; };
+		CD0719422910005900DEBE64 /* MenuButtonRectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonRectModel.swift; sourceTree = "<group>"; };
+		CD071944291006C700DEBE64 /* MenuButtonTextHidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonTextHidden.swift; sourceTree = "<group>"; };
+		CD0719462910072600DEBE64 /* MenuButtonTextHiddenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonTextHiddenModel.swift; sourceTree = "<group>"; };
 		CD5B304529043C6E00B9105C /* TileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewModel.swift; sourceTree = "<group>"; };
 		CD5B304729043C9300B9105C /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		CD5B304B2904417600B9105C /* Five Tiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Five Tiles.swift"; sourceTree = "<group>"; };
@@ -195,8 +207,14 @@
 				CDA499BE290D517D00545B93 /* Background.swift */,
 				CDE4649E290AB06300AA8FB8 /* BackIcon.swift */,
 				CDA499B0290C210000545B93 /* InfoButton.swift */,
-				CDE464A9290ABF0A00AA8FB8 /* ScoreField.swift */,
 				CDE464A1290AB19800AA8FB8 /* MenuButton.swift */,
+				CD071940290FF02A00DEBE64 /* MenuButtonModel.swift */,
+				CD07193E290FEC5900DEBE64 /* MenuButtonRect.swift */,
+				CD0719422910005900DEBE64 /* MenuButtonRectModel.swift */,
+				CD071944291006C700DEBE64 /* MenuButtonTextHidden.swift */,
+				CD0719462910072600DEBE64 /* MenuButtonTextHiddenModel.swift */,
+				CD07193C290FEB9C00DEBE64 /* MenuButtonText.swift */,
+				CDE464A9290ABF0A00AA8FB8 /* ScoreField.swift */,
 				CDA499C0290D526800545B93 /* Paragraph.swift */,
 				CDE464AE290B366900AA8FB8 /* Popup.swift */,
 				CDA499BC290D507E00545B93 /* ShowModal.swift */,
@@ -326,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDE464AF290B366900AA8FB8 /* Popup.swift in Sources */,
+				CD07193D290FEB9C00DEBE64 /* MenuButtonText.swift in Sources */,
 				CD5B304F29045A4B00B9105C /* RoundedCornersShape.swift in Sources */,
 				CDA499D1290ED95A00545B93 /* TileView.swift in Sources */,
 				CDE464B1290BC28900AA8FB8 /* IntegerPower.swift in Sources */,
@@ -333,14 +352,18 @@
 				CDE464A4290AB36800AA8FB8 /* Title.swift in Sources */,
 				CDA499B1290C210000545B93 /* InfoButton.swift in Sources */,
 				CDE4649C290A733D00AA8FB8 /* MemoryHandler.swift in Sources */,
+				CD071945291006C700DEBE64 /* MenuButtonTextHidden.swift in Sources */,
 				CD7707352900934C00659FFC /* MainView.swift in Sources */,
+				CD0719432910005900DEBE64 /* MenuButtonRectModel.swift in Sources */,
 				CDA499BD290D507E00545B93 /* ShowModal.swift in Sources */,
+				CD0719472910072600DEBE64 /* MenuButtonTextHiddenModel.swift in Sources */,
 				CD77072728FF46C400659FFC /* Five_GuysApp.swift in Sources */,
 				CDE464B4290BC87E00AA8FB8 /* GameViewModel.swift in Sources */,
 				CDE4649A2909D5AB00AA8FB8 /* Page.swift in Sources */,
 				CDE464AC290B06DA00AA8FB8 /* isNumberString.swift in Sources */,
 				CDE464982909D2AC00AA8FB8 /* GameView.swift in Sources */,
 				CDA499BF290D517D00545B93 /* Background.swift in Sources */,
+				CD071941290FF02A00DEBE64 /* MenuButtonModel.swift in Sources */,
 				CDE4649F290AB06300AA8FB8 /* BackIcon.swift in Sources */,
 				CDE464A8290ABA7D00AA8FB8 /* ScoreView.swift in Sources */,
 				CDE464A6290AB52D00AA8FB8 /* Subtitle.swift in Sources */,
@@ -350,6 +373,7 @@
 				CD5B304C2904417600B9105C /* Five Tiles.swift in Sources */,
 				CDA499C1290D526800545B93 /* Paragraph.swift in Sources */,
 				CDE464A2290AB19800AA8FB8 /* MenuButton.swift in Sources */,
+				CD07193F290FEC5900DEBE64 /* MenuButtonRect.swift in Sources */,
 				CD5B304829043C9300B9105C /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

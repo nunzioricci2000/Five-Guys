@@ -24,10 +24,10 @@ struct Popup: View {
                     Subtitle(label1)
                         .onTapGesture(perform: onTap1)
                         .padding()
-                    Spacer()
-                    Subtitle(label2)
-                        .onTapGesture(perform: onTap2)
-                        .padding()
+                    // Spacer()
+                    // Subtitle(label2)
+                    //     .onTapGesture(perform: onTap2)
+                    //     .padding()
                 }
             }.frame(width: 200, height: 125)
                 .overlay(

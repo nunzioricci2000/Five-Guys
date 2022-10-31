@@ -8,32 +8,44 @@
 import SwiftUI
 
 struct MenuButton: View {
-    @State var title: String
-    @State var subtitle: String
+    @ObservedObject var viewModel: ViewModel = ViewModel()
     
     init(_ title: String, subtitle: String = "") {
-        self.title = title
-        self.subtitle = subtitle
+        viewModel.title = title
+        viewModel.subtitle = subtitle
     }
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
-                .stroke(Color("main"), lineWidth: 5)
-                .frame(width: 300, height: 100)
-            RoundedRectangle(cornerRadius: 20)
                 .fill(Color("main").opacity(0.0001))
                 .frame(width: 300, height: 100)
-            VStack {
-                Text(title)
-                    .font(.system(size: 35, design: .rounded))
-                    .foregroundColor(Color("main"))
-                    .fontWeight(.semibold)
-                if subtitle != "" {
-                    Subtitle(subtitle)
-                }
-            }
-        }
+            
+            ZStack {
+                ZStack {
+                    MenuButtonText(viewModel.title, subtitle: viewModel.subtitle)
+                        .zIndex(0)
+                    MenuButtonRect(model: MenuButtonRect.ViewModel(pressed: viewModel.pressed))
+                        .blendMode(.destinationOver)
+                        .zIndex(1)
+                }.compositingGroup()
+                    .zIndex(0)
+                MenuButtonTextHidden(model: MenuButtonTextHidden.ViewModel(viewModel.title, subtitle: viewModel.subtitle, pressed: viewModel.pressed)).zIndex(1)
+                    .blendMode(.destinationOut)
+            }.compositingGroup()
+        }.simultaneousGesture(
+            DragGesture(minimumDistance: 0)
+                .onChanged({_ in
+                    withAnimation {
+                        viewModel.pressed = true
+                    }
+                })
+                .onEnded({_ in
+                    withAnimation {
+                        viewModel.pressed = false
+                    }
+                })
+        )
     }
 }
 
@@ -44,7 +56,6 @@ struct MenuButton_Previews: PreviewProvider {
             VStack {
                 Spacer()
                 MenuButton("PLAY!")
-                Spacer()
                 MenuButton("PLAY",subtitle: "Level: 13")
                 Spacer()
             }
