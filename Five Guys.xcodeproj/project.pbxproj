@@ -13,6 +13,7 @@
 		CD0719432910005900DEBE64 /* MenuButtonRectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0719422910005900DEBE64 /* MenuButtonRectModel.swift */; };
 		CD071945291006C700DEBE64 /* MenuButtonTextHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071944291006C700DEBE64 /* MenuButtonTextHidden.swift */; };
 		CD0719472910072600DEBE64 /* MenuButtonTextHiddenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0719462910072600DEBE64 /* MenuButtonTextHiddenModel.swift */; };
+		CD071949291010C900DEBE64 /* Foreground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071948291010C900DEBE64 /* Foreground.swift */; };
 		CD5B304629043C6E00B9105C /* TileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304529043C6E00B9105C /* TileViewModel.swift */; };
 		CD5B304829043C9300B9105C /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304729043C9300B9105C /* Board.swift */; };
 		CD5B304C2904417600B9105C /* Five Tiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304B2904417600B9105C /* Five Tiles.swift */; };
@@ -61,6 +62,7 @@
 		CD0719422910005900DEBE64 /* MenuButtonRectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonRectModel.swift; sourceTree = "<group>"; };
 		CD071944291006C700DEBE64 /* MenuButtonTextHidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonTextHidden.swift; sourceTree = "<group>"; };
 		CD0719462910072600DEBE64 /* MenuButtonTextHiddenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonTextHiddenModel.swift; sourceTree = "<group>"; };
+		CD071948291010C900DEBE64 /* Foreground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foreground.swift; sourceTree = "<group>"; };
 		CD5B304529043C6E00B9105C /* TileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewModel.swift; sourceTree = "<group>"; };
 		CD5B304729043C9300B9105C /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		CD5B304B2904417600B9105C /* Five Tiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Five Tiles.swift"; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				CDA499BC290D507E00545B93 /* ShowModal.swift */,
 				CDE464A5290AB52D00AA8FB8 /* Subtitle.swift */,
 				CDE464A3290AB36800AA8FB8 /* Title.swift */,
+				CD071948291010C900DEBE64 /* Foreground.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			files = (
 				CDE464AF290B366900AA8FB8 /* Popup.swift in Sources */,
 				CD07193D290FEB9C00DEBE64 /* MenuButtonText.swift in Sources */,
+				CD071949291010C900DEBE64 /* Foreground.swift in Sources */,
 				CD5B304F29045A4B00B9105C /* RoundedCornersShape.swift in Sources */,
 				CDA499D1290ED95A00545B93 /* TileView.swift in Sources */,
 				CDE464B1290BC28900AA8FB8 /* IntegerPower.swift in Sources */,
