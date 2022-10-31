@@ -27,7 +27,6 @@
 		CDA499BD290D507E00545B93 /* ShowModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499BC290D507E00545B93 /* ShowModal.swift */; };
 		CDA499BF290D517D00545B93 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499BE290D517D00545B93 /* Background.swift */; };
 		CDA499C1290D526800545B93 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499C0290D526800545B93 /* Paragraph.swift */; };
-		CDA499C9290ED6C500545B93 /* Five_GuysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499C8290ED6C500545B93 /* Five_GuysTests.swift */; };
 		CDA499D1290ED95A00545B93 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499D0290ED95A00545B93 /* TileView.swift */; };
 		CDE464962909D28F00AA8FB8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464952909D28F00AA8FB8 /* HomeView.swift */; };
 		CDE464982909D2AC00AA8FB8 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464972909D2AC00AA8FB8 /* GameView.swift */; };
@@ -45,16 +44,6 @@
 		CDE464B4290BC87E00AA8FB8 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464B3290BC87E00AA8FB8 /* GameViewModel.swift */; };
 		CDE464B6290BC94800AA8FB8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464B5290BC94800AA8FB8 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CDA499CA290ED6C500545B93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD77071B28FF46C400659FFC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CD77072228FF46C400659FFC;
-			remoteInfo = "Five Guys";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CD07193C290FEB9C00DEBE64 /* MenuButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonText.swift; sourceTree = "<group>"; };
@@ -78,8 +67,6 @@
 		CDA499BC290D507E00545B93 /* ShowModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowModal.swift; sourceTree = "<group>"; };
 		CDA499BE290D517D00545B93 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		CDA499C0290D526800545B93 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
-		CDA499C6290ED6C500545B93 /* Five GuysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Five GuysTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDA499C8290ED6C500545B93 /* Five_GuysTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Five_GuysTests.swift; sourceTree = "<group>"; };
 		CDA499D0290ED95A00545B93 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		CDE464952909D28F00AA8FB8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CDE464972909D2AC00AA8FB8 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -100,13 +87,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		CD77072028FF46C400659FFC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDA499C3290ED6C500545B93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -151,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				CD77072528FF46C400659FFC /* Five Guys */,
-				CDA499C7290ED6C500545B93 /* Five GuysTests */,
 				CD77072428FF46C400659FFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -160,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				CD77072328FF46C400659FFC /* Five Guys.app */,
-				CDA499C6290ED6C500545B93 /* Five GuysTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,14 +165,6 @@
 				CD77072D28FF46C600659FFC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		CDA499C7290ED6C500545B93 /* Five GuysTests */ = {
-			isa = PBXGroup;
-			children = (
-				CDA499C8290ED6C500545B93 /* Five_GuysTests.swift */,
-			);
-			path = "Five GuysTests";
 			sourceTree = "<group>";
 		};
 		CDA499D2290EF2AE00545B93 /* Tile */ = {
@@ -269,24 +239,6 @@
 			productReference = CD77072328FF46C400659FFC /* Five Guys.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CDA499C5290ED6C500545B93 /* Five GuysTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CDA499CE290ED6C500545B93 /* Build configuration list for PBXNativeTarget "Five GuysTests" */;
-			buildPhases = (
-				CDA499C2290ED6C500545B93 /* Sources */,
-				CDA499C3290ED6C500545B93 /* Frameworks */,
-				CDA499C4290ED6C500545B93 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CDA499CB290ED6C500545B93 /* PBXTargetDependency */,
-			);
-			name = "Five GuysTests";
-			productName = "Five GuysTests";
-			productReference = CDA499C6290ED6C500545B93 /* Five GuysTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -299,10 +251,6 @@
 				TargetAttributes = {
 					CD77072228FF46C400659FFC = {
 						CreatedOnToolsVersion = 14.0.1;
-					};
-					CDA499C5290ED6C500545B93 = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = CD77072228FF46C400659FFC;
 					};
 				};
 			};
@@ -320,7 +268,6 @@
 			projectRoot = "";
 			targets = (
 				CD77072228FF46C400659FFC /* Five Guys */,
-				CDA499C5290ED6C500545B93 /* Five GuysTests */,
 			);
 		};
 /* End PBXProject section */
@@ -332,13 +279,6 @@
 			files = (
 				CD77072E28FF46C600659FFC /* Preview Assets.xcassets in Resources */,
 				CD77072B28FF46C600659FFC /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CDA499C4290ED6C500545B93 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,23 +326,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CDA499C2290ED6C500545B93 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CDA499C9290ED6C500545B93 /* Five_GuysTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CDA499CB290ED6C500545B93 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CD77072228FF46C400659FFC /* Five Guys */;
-			targetProxy = CDA499CA290ED6C500545B93 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CD77072F28FF46C600659FFC /* Debug */ = {
@@ -585,50 +509,6 @@
 			};
 			name = Release;
 		};
-		CDA499CC290ED6C500545B93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 57Z9KVXBQ7;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Nunzio.Five-GuysTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Five Guys.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Five Guys";
-			};
-			name = Debug;
-		};
-		CDA499CD290ED6C500545B93 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 57Z9KVXBQ7;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Nunzio.Five-GuysTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Five Guys.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Five Guys";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -646,15 +526,6 @@
 			buildConfigurations = (
 				CD77073228FF46C600659FFC /* Debug */,
 				CD77073328FF46C600659FFC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CDA499CE290ED6C500545B93 /* Build configuration list for PBXNativeTarget "Five GuysTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDA499CC290ED6C500545B93 /* Debug */,
-				CDA499CD290ED6C500545B93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
