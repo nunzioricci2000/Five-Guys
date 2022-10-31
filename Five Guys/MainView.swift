@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject var handler: PageHandler = PageHandler()
+    @ObservedObject var handler: PageHandler = PageHandler()
     
     var body: some View {
         ZStack {

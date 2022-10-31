@@ -10,9 +10,10 @@ import SwiftUI
 struct MenuButton: View {
     @ObservedObject var viewModel: ViewModel = ViewModel()
     
-    init(_ title: String, subtitle: String = "") {
+    init(_ title: String, subtitle: String = "", onTap: @escaping ()->() = {}) {
         viewModel.title = title
         viewModel.subtitle = subtitle
+        viewModel.onTap = onTap
     }
     
     var body: some View {
@@ -42,7 +43,8 @@ struct MenuButton: View {
                 })
                 .onEnded({_ in
                     withAnimation {
-                        viewModel.pressed = false
+                        // viewModel.pressed = false
+                        viewModel.onTap()
                     }
                 })
         )

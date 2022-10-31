@@ -11,7 +11,7 @@ let totalLevels: Int = 2 ^^ 25 - 1
 
 struct HomeView: View {
     @EnvironmentObject var handler: PageHandler
-    @StateObject var model = ViewModel()
+    @ObservedObject var model = ViewModel()
     
     var body: some View {
         ZStack {
@@ -24,14 +24,13 @@ struct HomeView: View {
                     .padding(.bottom, 100)
                     .offset(y:37)
                 Spacer()
-                Button {
+                MenuButton("PLAY", subtitle: "Level: \(model.currentLevel)")
+                {
                     withAnimation {
                         handler.page = .game
                     }
-                } label: {
-                    MenuButton("PLAY", subtitle: "Level: \(model.currentLevel)")
                 }.padding()
-                MenuButton("SCORE").onTapGesture {
+                MenuButton("SCORE") {
                     withAnimation {
                         handler.page = .history
                     }
@@ -47,8 +46,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            LinearGradient(colors: [Color("BackgroundColorBottomTrailing"), Color("BackgroundColorTopLeading")], startPoint: .bottomTrailing, endPoint: .topLeading)
-                .ignoresSafeArea()
+            Background()
             HomeView()
         }
     }

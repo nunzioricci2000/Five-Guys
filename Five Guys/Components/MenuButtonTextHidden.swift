@@ -23,7 +23,7 @@ struct MenuButtonTextHidden: View {
                     .frame(width: 290, height: 90)
                     .zIndex(1)
                     .blendMode(.destinationOut)
-                    .transition(.scale)
+                    .transition(.scale.animation(.linear(duration: 0.2)))
             }
         }.compositingGroup()
     }

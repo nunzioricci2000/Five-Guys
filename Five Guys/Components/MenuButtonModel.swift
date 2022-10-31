@@ -13,5 +13,6 @@ extension MenuButton {
         @Published var title: String = ""
         @Published var subtitle: String = ""
         @Published var pressed: Bool = false
+        @Published var onTap: ()->() = {}
     }
 }
