@@ -7,82 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD07193D290FEB9C00DEBE64 /* MenuButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07193C290FEB9C00DEBE64 /* MenuButtonText.swift */; };
-		CD07193F290FEC5900DEBE64 /* MenuButtonRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD07193E290FEC5900DEBE64 /* MenuButtonRect.swift */; };
-		CD071941290FF02A00DEBE64 /* MenuButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071940290FF02A00DEBE64 /* MenuButtonModel.swift */; };
-		CD0719432910005900DEBE64 /* MenuButtonRectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0719422910005900DEBE64 /* MenuButtonRectModel.swift */; };
-		CD071945291006C700DEBE64 /* MenuButtonTextHidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071944291006C700DEBE64 /* MenuButtonTextHidden.swift */; };
-		CD0719472910072600DEBE64 /* MenuButtonTextHiddenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0719462910072600DEBE64 /* MenuButtonTextHiddenModel.swift */; };
-		CD071949291010C900DEBE64 /* Foreground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD071948291010C900DEBE64 /* Foreground.swift */; };
-		CD2E73612910352200199AA3 /* HapticFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E73602910352200199AA3 /* HapticFlip.swift */; };
-		CD5B304629043C6E00B9105C /* TileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304529043C6E00B9105C /* TileViewModel.swift */; };
-		CD5B304829043C9300B9105C /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304729043C9300B9105C /* Board.swift */; };
-		CD5B304C2904417600B9105C /* Five Tiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304B2904417600B9105C /* Five Tiles.swift */; };
-		CD5B304F29045A4B00B9105C /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B304E29045A4B00B9105C /* RoundedCornersShape.swift */; };
 		CD77072728FF46C400659FFC /* Five_GuysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD77072628FF46C400659FFC /* Five_GuysApp.swift */; };
 		CD77072B28FF46C600659FFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD77072A28FF46C600659FFC /* Assets.xcassets */; };
 		CD77072E28FF46C600659FFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD77072D28FF46C600659FFC /* Preview Assets.xcassets */; };
 		CD7707352900934C00659FFC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7707342900934C00659FFC /* MainView.swift */; };
-		CDA499B1290C210000545B93 /* InfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499B0290C210000545B93 /* InfoButton.swift */; };
-		CDA499BD290D507E00545B93 /* ShowModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499BC290D507E00545B93 /* ShowModal.swift */; };
-		CDA499BF290D517D00545B93 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499BE290D517D00545B93 /* Background.swift */; };
-		CDA499C1290D526800545B93 /* Paragraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499C0290D526800545B93 /* Paragraph.swift */; };
-		CDA499D1290ED95A00545B93 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA499D0290ED95A00545B93 /* TileView.swift */; };
-		CDE464962909D28F00AA8FB8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464952909D28F00AA8FB8 /* HomeView.swift */; };
-		CDE464982909D2AC00AA8FB8 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464972909D2AC00AA8FB8 /* GameView.swift */; };
-		CDE4649A2909D5AB00AA8FB8 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464992909D5AB00AA8FB8 /* Page.swift */; };
-		CDE4649C290A733D00AA8FB8 /* MemoryHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4649B290A733D00AA8FB8 /* MemoryHandler.swift */; };
-		CDE4649F290AB06300AA8FB8 /* BackIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE4649E290AB06300AA8FB8 /* BackIcon.swift */; };
-		CDE464A2290AB19800AA8FB8 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A1290AB19800AA8FB8 /* MenuButton.swift */; };
-		CDE464A4290AB36800AA8FB8 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A3290AB36800AA8FB8 /* Title.swift */; };
-		CDE464A6290AB52D00AA8FB8 /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A5290AB52D00AA8FB8 /* Subtitle.swift */; };
-		CDE464A8290ABA7D00AA8FB8 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A7290ABA7D00AA8FB8 /* ScoreView.swift */; };
-		CDE464AA290ABF0A00AA8FB8 /* ScoreField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464A9290ABF0A00AA8FB8 /* ScoreField.swift */; };
-		CDE464AC290B06DA00AA8FB8 /* isNumberString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */; };
-		CDE464AF290B366900AA8FB8 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464AE290B366900AA8FB8 /* Popup.swift */; };
-		CDE464B1290BC28900AA8FB8 /* IntegerPower.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464B0290BC28900AA8FB8 /* IntegerPower.swift */; };
-		CDE464B4290BC87E00AA8FB8 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464B3290BC87E00AA8FB8 /* GameViewModel.swift */; };
-		CDE464B6290BC94800AA8FB8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE464B5290BC94800AA8FB8 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CD07193C290FEB9C00DEBE64 /* MenuButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonText.swift; sourceTree = "<group>"; };
-		CD07193E290FEC5900DEBE64 /* MenuButtonRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonRect.swift; sourceTree = "<group>"; };
-		CD071940290FF02A00DEBE64 /* MenuButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonModel.swift; sourceTree = "<group>"; };
-		CD0719422910005900DEBE64 /* MenuButtonRectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonRectModel.swift; sourceTree = "<group>"; };
-		CD071944291006C700DEBE64 /* MenuButtonTextHidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonTextHidden.swift; sourceTree = "<group>"; };
-		CD0719462910072600DEBE64 /* MenuButtonTextHiddenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonTextHiddenModel.swift; sourceTree = "<group>"; };
-		CD071948291010C900DEBE64 /* Foreground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foreground.swift; sourceTree = "<group>"; };
-		CD2E73602910352200199AA3 /* HapticFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFlip.swift; sourceTree = "<group>"; };
-		CD5B304529043C6E00B9105C /* TileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewModel.swift; sourceTree = "<group>"; };
-		CD5B304729043C9300B9105C /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-		CD5B304B2904417600B9105C /* Five Tiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Five Tiles.swift"; sourceTree = "<group>"; };
-		CD5B304E29045A4B00B9105C /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		CD77072328FF46C400659FFC /* Five Guys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Five Guys.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD77072628FF46C400659FFC /* Five_GuysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Five_GuysApp.swift; sourceTree = "<group>"; };
 		CD77072A28FF46C600659FFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD77072D28FF46C600659FFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CD7707342900934C00659FFC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		CDA499B0290C210000545B93 /* InfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButton.swift; sourceTree = "<group>"; };
-		CDA499BC290D507E00545B93 /* ShowModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowModal.swift; sourceTree = "<group>"; };
-		CDA499BE290D517D00545B93 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
-		CDA499C0290D526800545B93 /* Paragraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paragraph.swift; sourceTree = "<group>"; };
-		CDA499D0290ED95A00545B93 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
-		CDE464952909D28F00AA8FB8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		CDE464972909D2AC00AA8FB8 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		CDE464992909D5AB00AA8FB8 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
-		CDE4649B290A733D00AA8FB8 /* MemoryHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryHandler.swift; sourceTree = "<group>"; };
-		CDE4649E290AB06300AA8FB8 /* BackIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackIcon.swift; sourceTree = "<group>"; };
-		CDE464A1290AB19800AA8FB8 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
-		CDE464A3290AB36800AA8FB8 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
-		CDE464A5290AB52D00AA8FB8 /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
-		CDE464A7290ABA7D00AA8FB8 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
-		CDE464A9290ABF0A00AA8FB8 /* ScoreField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreField.swift; sourceTree = "<group>"; };
-		CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isNumberString.swift; sourceTree = "<group>"; };
-		CDE464AE290B366900AA8FB8 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
-		CDE464B0290BC28900AA8FB8 /* IntegerPower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegerPower.swift; sourceTree = "<group>"; };
-		CDE464B3290BC87E00AA8FB8 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
-		CDE464B5290BC94800AA8FB8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,37 +32,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CD5B304329043BCD00B9105C /* Games */ = {
-			isa = PBXGroup;
-			children = (
-				CD5B304429043BE400B9105C /* Five Tiles */,
-			);
-			path = Games;
-			sourceTree = "<group>";
-		};
-		CD5B304429043BE400B9105C /* Five Tiles */ = {
-			isa = PBXGroup;
-			children = (
-				CDA499D2290EF2AE00545B93 /* Tile */,
-				CD5B304729043C9300B9105C /* Board.swift */,
-				CD5B304B2904417600B9105C /* Five Tiles.swift */,
-			);
-			path = "Five Tiles";
-			sourceTree = "<group>";
-		};
-		CD5B304D29045A1000B9105C /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-				CD5B304E29045A4B00B9105C /* RoundedCornersShape.swift */,
-				CDE464992909D5AB00AA8FB8 /* Page.swift */,
-				CDE4649B290A733D00AA8FB8 /* MemoryHandler.swift */,
-				CDE464AB290B06DA00AA8FB8 /* isNumberString.swift */,
-				CDE464B0290BC28900AA8FB8 /* IntegerPower.swift */,
-				CD2E73602910352200199AA3 /* HapticFlip.swift */,
-			);
-			path = Custom;
-			sourceTree = "<group>";
-		};
 		CD77071A28FF46C400659FFC = {
 			isa = PBXGroup;
 			children = (
@@ -148,11 +53,6 @@
 			children = (
 				CD77072628FF46C400659FFC /* Five_GuysApp.swift */,
 				CD7707342900934C00659FFC /* MainView.swift */,
-				CDE464B2290BC6E800AA8FB8 /* ViewModels */,
-				CDE464AD290B1C8000AA8FB8 /* Views */,
-				CDE4649D290AB03E00AA8FB8 /* Components */,
-				CD5B304D29045A1000B9105C /* Custom */,
-				CD5B304329043BCD00B9105C /* Games */,
 				CD77072A28FF46C600659FFC /* Assets.xcassets */,
 				CD77072C28FF46C600659FFC /* Preview Content */,
 			);
@@ -165,58 +65,6 @@
 				CD77072D28FF46C600659FFC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		CDA499D2290EF2AE00545B93 /* Tile */ = {
-			isa = PBXGroup;
-			children = (
-				CDA499D0290ED95A00545B93 /* TileView.swift */,
-				CD5B304529043C6E00B9105C /* TileViewModel.swift */,
-			);
-			path = Tile;
-			sourceTree = "<group>";
-		};
-		CDE4649D290AB03E00AA8FB8 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				CDA499BE290D517D00545B93 /* Background.swift */,
-				CDE4649E290AB06300AA8FB8 /* BackIcon.swift */,
-				CDA499B0290C210000545B93 /* InfoButton.swift */,
-				CDE464A1290AB19800AA8FB8 /* MenuButton.swift */,
-				CD071940290FF02A00DEBE64 /* MenuButtonModel.swift */,
-				CD07193E290FEC5900DEBE64 /* MenuButtonRect.swift */,
-				CD0719422910005900DEBE64 /* MenuButtonRectModel.swift */,
-				CD071944291006C700DEBE64 /* MenuButtonTextHidden.swift */,
-				CD0719462910072600DEBE64 /* MenuButtonTextHiddenModel.swift */,
-				CD07193C290FEB9C00DEBE64 /* MenuButtonText.swift */,
-				CDE464A9290ABF0A00AA8FB8 /* ScoreField.swift */,
-				CDA499C0290D526800545B93 /* Paragraph.swift */,
-				CDE464AE290B366900AA8FB8 /* Popup.swift */,
-				CDA499BC290D507E00545B93 /* ShowModal.swift */,
-				CDE464A5290AB52D00AA8FB8 /* Subtitle.swift */,
-				CDE464A3290AB36800AA8FB8 /* Title.swift */,
-				CD071948291010C900DEBE64 /* Foreground.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		CDE464AD290B1C8000AA8FB8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CDE464952909D28F00AA8FB8 /* HomeView.swift */,
-				CDE464972909D2AC00AA8FB8 /* GameView.swift */,
-				CDE464A7290ABA7D00AA8FB8 /* ScoreView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		CDE464B2290BC6E800AA8FB8 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				CDE464B5290BC94800AA8FB8 /* HomeViewModel.swift */,
-				CDE464B3290BC87E00AA8FB8 /* GameViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,40 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDE464AF290B366900AA8FB8 /* Popup.swift in Sources */,
-				CD07193D290FEB9C00DEBE64 /* MenuButtonText.swift in Sources */,
-				CD071949291010C900DEBE64 /* Foreground.swift in Sources */,
-				CD5B304F29045A4B00B9105C /* RoundedCornersShape.swift in Sources */,
-				CDA499D1290ED95A00545B93 /* TileView.swift in Sources */,
-				CDE464B1290BC28900AA8FB8 /* IntegerPower.swift in Sources */,
-				CD5B304629043C6E00B9105C /* TileViewModel.swift in Sources */,
-				CDE464A4290AB36800AA8FB8 /* Title.swift in Sources */,
-				CDA499B1290C210000545B93 /* InfoButton.swift in Sources */,
-				CDE4649C290A733D00AA8FB8 /* MemoryHandler.swift in Sources */,
-				CD071945291006C700DEBE64 /* MenuButtonTextHidden.swift in Sources */,
 				CD7707352900934C00659FFC /* MainView.swift in Sources */,
-				CD0719432910005900DEBE64 /* MenuButtonRectModel.swift in Sources */,
-				CDA499BD290D507E00545B93 /* ShowModal.swift in Sources */,
-				CD0719472910072600DEBE64 /* MenuButtonTextHiddenModel.swift in Sources */,
 				CD77072728FF46C400659FFC /* Five_GuysApp.swift in Sources */,
-				CDE464B4290BC87E00AA8FB8 /* GameViewModel.swift in Sources */,
-				CDE4649A2909D5AB00AA8FB8 /* Page.swift in Sources */,
-				CDE464AC290B06DA00AA8FB8 /* isNumberString.swift in Sources */,
-				CDE464982909D2AC00AA8FB8 /* GameView.swift in Sources */,
-				CDA499BF290D517D00545B93 /* Background.swift in Sources */,
-				CD071941290FF02A00DEBE64 /* MenuButtonModel.swift in Sources */,
-				CDE4649F290AB06300AA8FB8 /* BackIcon.swift in Sources */,
-				CDE464A8290ABA7D00AA8FB8 /* ScoreView.swift in Sources */,
-				CDE464A6290AB52D00AA8FB8 /* Subtitle.swift in Sources */,
-				CDE464AA290ABF0A00AA8FB8 /* ScoreField.swift in Sources */,
-				CDE464B6290BC94800AA8FB8 /* HomeViewModel.swift in Sources */,
-				CDE464962909D28F00AA8FB8 /* HomeView.swift in Sources */,
-				CD5B304C2904417600B9105C /* Five Tiles.swift in Sources */,
-				CD2E73612910352200199AA3 /* HapticFlip.swift in Sources */,
-				CDA499C1290D526800545B93 /* Paragraph.swift in Sources */,
-				CDE464A2290AB19800AA8FB8 /* MenuButton.swift in Sources */,
-				CD07193F290FEC5900DEBE64 /* MenuButtonRect.swift in Sources */,
-				CD5B304829043C9300B9105C /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
